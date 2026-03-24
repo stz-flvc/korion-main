@@ -1,0 +1,536 @@
+.developers-partners-page {
+    min-height: 100vh;
+    background: #f4f5f7;
+    color: #1f2f44;
+    }
+
+    .developers-partners-page__container {
+    width: min(1320px, calc(100% - 40px));
+    margin: 0 auto;
+    }
+
+    .developers-partners-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: linear-gradient(180deg, #0a1020 0%, #0c1224 100%);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .developers-partners-topbar__inner {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    }
+
+    .developers-partners-topbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    }
+
+    .developers-partners-topbar__brand-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #7c92ff 0%, #7c5dff 100%);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 900;
+    }
+
+    .developers-partners-topbar__nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    }
+
+    .developers-partners-topbar__nav a {
+    color: rgba(230,236,255,0.82);
+    text-decoration: none;
+    font-weight: 700;
+    }
+
+    .developers-partners-topbar__nav a.is-active,
+    .developers-partners-topbar__nav a:hover {
+    color: #fff;
+    }
+
+    .developers-partners-hero {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(124,146,255,0.18), transparent 24%),
+        radial-gradient(circle at 80% 10%, rgba(125,92,255,0.18), transparent 24%),
+        linear-gradient(180deg, #0b1325 0%, #101b34 100%);
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .developers-partners-hero .developers-partners-page__container {
+    padding: 56px 0 48px;
+    }
+
+    .developers-partners-hero__crumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    }
+
+    .developers-partners-hero__crumbs a,
+    .developers-partners-hero__crumbs span {
+    color: #d5e0ff;
+    text-decoration: none;
+    font-weight: 700;
+    }
+
+    .developers-partners-hero h1 {
+    margin: 0 0 14px;
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+    font-weight: 950;
+    }
+
+    .developers-partners-hero p {
+    margin: 0;
+    max-width: 840px;
+    color: rgba(234,240,255,0.82);
+    line-height: 1.85;
+    }
+
+    .developers-partners-body .developers-partners-page__container {
+    padding-top: 24px;
+    padding-bottom: 48px;
+    }
+
+    .developers-partners-intro {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+    }
+
+    .developers-partners-intro__card {
+    background: #fff;
+    border: 1px solid #e3e7ee;
+    border-radius: 18px;
+    padding: 20px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    }
+
+    .developers-partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+    }
+
+    .developers-partners-card,
+    .developers-partners-section {
+    background: #fff;
+    border: 1px solid #e3e7ee;
+    border-radius: 18px;
+    }
+
+    .developers-partners-card {
+    padding: 22px 20px;
+    }
+
+    .developers-partners-card__icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, rgba(124,146,255,0.14), rgba(124,93,255,0.12));
+    color: #5166d2;
+    }
+
+    .developers-partners-card h2,
+    .developers-partners-section h2 {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+    color: #1f3048;
+    letter-spacing: -0.02em;
+    }
+
+    .developers-partners-card p {
+    margin: 0;
+    color: #455569;
+    line-height: 1.8;
+    }
+
+    .developers-partners-card__button {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: #18243a;
+    color: #fff;
+    font-weight: 800;
+    }
+
+    .developers-partners-section {
+    padding: 24px 22px;
+    }
+
+    .developers-partners-divider {
+    height: 1px;
+    background: #e8ecf2;
+    margin: 0 0 18px;
+    }
+
+    .developers-partners-checklist {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    }
+
+    .developers-partners-checklist div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid #e7ebf1;
+    background: #fafbfd;
+    border-radius: 14px;
+    padding: 14px;
+    color: #23344b;
+    font-weight: 700;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 1024px) {
+    .developers-partners-page {
+        overflow-x: hidden;
+    }
+
+    .developers-partners-page__container {
+        width: calc(100% - 28px);
+    }
+
+    .developers-partners-topbar__inner {
+        min-height: auto;
+        padding: 12px 0;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .developers-partners-topbar__brand {
+        flex: 0 0 auto;
+        min-width: 0;
+    }
+
+    .developers-partners-topbar__nav {
+        order: 3;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .developers-partners-topbar__nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .developers-partners-topbar__nav a {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 8px 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .developers-partners-hero .developers-partners-page__container {
+        padding: 34px 0 34px;
+    }
+
+    .developers-partners-hero__crumbs {
+        margin-bottom: 14px;
+        gap: 6px;
+        flex-wrap: wrap;
+        font-size: 0.84rem;
+    }
+
+    .developers-partners-hero h1 {
+        font-size: clamp(2rem, 6vw, 2.9rem);
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .developers-partners-hero p {
+        max-width: 100%;
+        font-size: 0.96rem;
+        line-height: 1.72;
+    }
+
+    .developers-partners-body .developers-partners-page__container {
+        padding-top: 18px;
+        padding-bottom: 36px;
+    }
+
+    .developers-partners-intro,
+    .developers-partners-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .developers-partners-intro__card {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    .developers-partners-card,
+    .developers-partners-section {
+        border-radius: 18px;
+    }
+
+    .developers-partners-card {
+        padding: 20px 18px;
+    }
+
+    .developers-partners-section {
+        padding: 20px 18px;
+    }
+
+    .developers-partners-card__icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+
+    .developers-partners-card h2,
+    .developers-partners-section h2 {
+        font-size: 1.12rem;
+        line-height: 1.3;
+    }
+
+    .developers-partners-card p {
+        font-size: 0.94rem;
+        line-height: 1.72;
+    }
+
+    .developers-partners-card__button {
+        margin-top: 14px;
+        padding: 11px 13px;
+        border-radius: 10px;
+        font-size: 0.92rem;
+    }
+
+    .developers-partners-divider {
+        margin-bottom: 16px;
+    }
+
+    .developers-partners-checklist {
+        gap: 10px;
+    }
+
+    .developers-partners-checklist div {
+        padding: 13px 14px;
+        border-radius: 12px;
+        font-size: 0.92rem;
+        line-height: 1.58;
+    }
+    }
+
+    @media (max-width: 768px) {
+    .developers-partners-page__container {
+        width: calc(100% - 20px);
+    }
+
+    .developers-partners-topbar__inner {
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .developers-partners-topbar__brand {
+        gap: 8px;
+        font-size: 0.94rem;
+    }
+
+    .developers-partners-topbar__brand-badge {
+        width: 26px;
+        height: 26px;
+        border-radius: 7px;
+        font-size: 0.82rem;
+    }
+
+    .developers-partners-topbar__nav a {
+        padding: 8px 10px;
+        font-size: 0.82rem;
+    }
+
+    .developers-partners-hero .developers-partners-page__container {
+        padding: 26px 0 28px;
+    }
+
+    .developers-partners-hero__crumbs {
+        margin-bottom: 12px;
+        font-size: 0.78rem;
+    }
+
+    .developers-partners-hero h1 {
+        font-size: clamp(1.7rem, 8.4vw, 2.2rem);
+        line-height: 1.12;
+        margin-bottom: 10px;
+    }
+
+    .developers-partners-hero p {
+        font-size: 0.9rem;
+        line-height: 1.66;
+    }
+
+    .developers-partners-body .developers-partners-page__container {
+        padding-top: 14px;
+        padding-bottom: 28px;
+    }
+
+    .developers-partners-intro {
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .developers-partners-intro__card {
+        padding: 14px 12px;
+        border-radius: 14px;
+        gap: 10px;
+    }
+
+    .developers-partners-grid {
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .developers-partners-card {
+        padding: 16px 14px;
+        border-radius: 16px;
+    }
+
+    .developers-partners-section {
+        padding: 16px 14px;
+        border-radius: 16px;
+    }
+
+    .developers-partners-card__icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .developers-partners-card h2,
+    .developers-partners-section h2 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .developers-partners-card p {
+        font-size: 0.88rem;
+        line-height: 1.64;
+    }
+
+    .developers-partners-card__button {
+        width: 100%;
+        justify-content: center;
+        margin-top: 12px;
+        padding: 11px 12px;
+        font-size: 0.86rem;
+    }
+
+    .developers-partners-divider {
+        margin-bottom: 12px;
+    }
+
+    .developers-partners-checklist {
+        gap: 9px;
+    }
+
+    .developers-partners-checklist div {
+        align-items: flex-start;
+        padding: 12px;
+        border-radius: 12px;
+        font-size: 0.86rem;
+        line-height: 1.6;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .developers-partners-page__container {
+        width: calc(100% - 16px);
+    }
+
+    .developers-partners-topbar__brand {
+        font-size: 0.9rem;
+    }
+
+    .developers-partners-hero .developers-partners-page__container {
+        padding: 22px 0 24px;
+    }
+
+    .developers-partners-hero h1 {
+        font-size: 1.52rem;
+    }
+
+    .developers-partners-hero p {
+        font-size: 0.82rem;
+        line-height: 1.56;
+    }
+
+    .developers-partners-intro__card,
+    .developers-partners-card,
+    .developers-partners-section {
+        border-radius: 12px;
+    }
+
+    .developers-partners-intro__card,
+    .developers-partners-card,
+    .developers-partners-section {
+        padding: 12px;
+    }
+
+    .developers-partners-card h2,
+    .developers-partners-section h2 {
+        font-size: 0.94rem;
+    }
+
+    .developers-partners-card p,
+    .developers-partners-checklist div {
+        font-size: 0.82rem;
+        line-height: 1.56;
+    }
+
+    .developers-partners-card__button {
+        font-size: 0.82rem;
+        border-radius: 10px;
+        padding: 10px 11px;
+    }
+    }

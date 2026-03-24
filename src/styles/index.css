@@ -1,0 +1,176 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Custom scrollbar ───────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+}
+
+/* ── Performance: GPU-composited layering hints ─────── */
+.will-change-auto {
+  will-change: auto;
+}
+
+/* ── Scroll-reveal via pure CSS ─────────────────────────
+   Add class "reveal" to any element.
+   When it becomes visible (via JS IntersectionObserver
+   adding "is-visible"), it fades up smoothly.
+   No per-element framer-motion overhead.
+──────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger variants */
+.reveal-d1 {
+  transition-delay: 0.06s;
+}
+
+.reveal-d2 {
+  transition-delay: 0.12s;
+}
+
+.reveal-d3 {
+  transition-delay: 0.18s;
+}
+
+.reveal-d4 {
+  transition-delay: 0.24s;
+}
+
+/* ── Extreme Performance Animations ────────────────── */
+@keyframes spin-cw {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-ccw {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes sparkle {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.4) translateY(-8px);
+  }
+}
+
+/* ── Smooth Navigation Refinements ────────────────── */
+html {
+  /* Disable smooth scroll for route changes to prevent "jumping" during AnimatePresence transitions */
+  scroll-behavior: auto !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@keyframes route-loader {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(420%);
+  }
+}
+
+@keyframes route-skeleton-shine {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(180%);
+  }
+}
+
+@keyframes route-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.route-skeleton__pulse {
+  position: relative;
+}
+
+.route-skeleton__shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.route-skeleton__shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 42%,
+    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.08) 58%,
+    transparent 100%
+  );
+  transform: translateX(-120%);
+  animation: route-skeleton-shine 1.5s ease-in-out infinite;
+}
+
+.route-skeleton__spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-top-color: rgba(125, 211, 252, 0.95);
+  animation: route-spinner 0.8s linear infinite;
+}
+
+/* Prevent layout shift during route transitions */
+main {
+  min-height: calc(100vh - 80px);
+  /* 80px is nav height */
+}

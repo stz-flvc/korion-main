@@ -1,0 +1,709 @@
+.korion-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    backdrop-filter 0.4s ease,
+    padding 0.4s ease,
+    box-shadow 0.4s ease;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.korion-nav--scrolled {
+  background: rgba(5, 5, 8, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+
+.korion-nav__container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.korion-nav__inner {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.korion-nav__left {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  min-width: 0;
+}
+
+.korion-nav__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.korion-nav__logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.korion-nav__logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.korion-nav__logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.korion-nav__desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.korion-nav__group {
+  position: relative;
+  padding: 8px 0 14px;
+}
+
+.korion-nav__group-button,
+.korion-nav__link {
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.92rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.korion-nav__group-button:hover,
+.korion-nav__link:hover,
+.korion-nav__group-button.is-open,
+.korion-nav__link.is-active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.korion-nav__group-arrow {
+  display: inline-flex;
+  opacity: 0.8;
+}
+
+.korion-nav__dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  width: 320px;
+  z-index: 1200;
+}
+
+
+
+.korion-nav__dropdown-panel {
+  position: relative;
+  padding: 10px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(24, 24, 34, 0.98), rgba(10, 10, 16, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow:
+    0 26px 70px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.korion-nav__dropdown-panel--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.korion-nav__dropdown-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.55),
+    rgba(168, 85, 247, 0.55),
+    transparent
+  );
+}
+
+.korion-nav__dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 18px;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.korion-nav__dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+.korion-nav__dropdown-item.is-active {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.22);
+}
+
+.korion-nav__dropdown-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.04);
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.korion-nav__dropdown-item:hover .korion-nav__dropdown-icon {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.14);
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.25),
+    0 8px 20px rgba(59, 130, 246, 0.18);
+}
+
+.korion-nav__dropdown-item.is-active .korion-nav__dropdown-icon {
+  color: #a78bfa;
+  background: rgba(168, 85, 247, 0.15);
+}
+
+.korion-nav__dropdown-content {
+  min-width: 0;
+}
+
+.korion-nav__dropdown-title {
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.korion-nav__dropdown-desc {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.korion-nav__more-block + .korion-nav__more-block {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.korion-nav__more-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0 12px 8px;
+}
+
+.korion-nav__more-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  
+}
+
+.korion-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.korion-nav__language {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.korion-nav__lang-button,
+.korion-nav__foundation-button {
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.88rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.korion-nav__lang-button:hover,
+.korion-nav__foundation-button:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.korion-nav__lang-button.is-open {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.korion-nav__language-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 220px;
+  z-index: 1300;
+}
+
+.korion-nav__language-panel {
+  position: relative;
+  padding: 8px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(24, 24, 34, 0.98), rgba(10, 10, 16, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.korion-nav__language-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.55),
+    rgba(168, 85, 247, 0.55),
+    transparent
+  );
+}
+
+.korion-nav__language-item {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 14px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.korion-nav__language-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.korion-nav__language-item.is-active {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.2);
+  color: #ffffff;
+}
+
+.korion-nav__language-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.korion-nav__language-code {
+  min-width: 38px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #9ec5ff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.korion-nav__language-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.korion-nav__language-check {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: #ffffff;
+  transition: opacity 0.2s ease;
+}
+
+.korion-nav__language-check.is-visible {
+  opacity: 1;
+}
+
+.korion-nav__cta-button {
+  height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #7c3aed 0%, #2563eb 100%);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.28);
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.korion-nav__cta-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.96;
+  box-shadow: 0 22px 46px rgba(37, 99, 235, 0.34);
+}
+
+.korion-nav__mobile-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.korion-nav__mobile-menu {
+  display: none;
+  overflow: hidden;
+}
+
+.korion-nav__mobile-menu-inner {
+  padding: 8px 0 20px;
+}
+
+.korion-nav__mobile-group {
+  margin-bottom: 6px;
+}
+
+.korion-nav__mobile-group-button {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 16px;
+  border-radius: 18px;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.84);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.korion-nav__mobile-group-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.korion-nav__mobile-submenu {
+  overflow: hidden;
+  padding-left: 8px;
+}
+
+.korion-nav__mobile-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.72);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.korion-nav__mobile-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.korion-nav__mobile-item.is-active {
+  background: rgba(59, 130, 246, 0.12);
+  color: #ffffff;
+}
+
+.korion-nav__mobile-item--single {
+  margin-top: 10px;
+}
+
+.korion-nav__mobile-item-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60a5fa;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.korion-nav__mobile-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.korion-nav__mobile-item-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.korion-nav__mobile-item-desc {
+  font-size: 0.76rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.korion-nav__mobile-language-block {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.korion-nav__mobile-language-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.korion-nav__mobile-language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.korion-nav__mobile-language-item {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.korion-nav__mobile-language-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.korion-nav__mobile-language-item.is-active {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.2);
+  color: #ffffff;
+}
+
+.korion-nav__mobile-language-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.korion-nav__mobile-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.korion-nav__mobile-action-button {
+  min-height: 46px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.korion-nav__mobile-cta {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #7c3aed 0%, #2563eb 100%);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 14px 36px rgba(37, 99, 235, 0.24);
+}
+
+@media (max-width: 1399px) {
+
+
+  .korion-nav__dropdown--more {
+    width: 680px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .korion-nav__desktop-menu,
+  .korion-nav__lang-button,
+  .korion-nav__foundation-button,
+  .korion-nav__cta-button {
+    display: none;
+  }
+
+  .korion-nav__mobile-toggle {
+    display: inline-flex;
+  }
+
+  .korion-nav__mobile-menu {
+    display: block;
+  }
+
+  .korion-nav__inner {
+    min-height: 82px;
+  }
+
+  .korion-nav__dropdown--grid,
+  .korion-nav__dropdown--more {
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) { 
+  .korion-nav__container {
+    padding: 0 16px;
+    background: #000000;
+  }
+
+  .korion-nav__inner {
+    min-height: 76px;
+  }
+
+  .korion-nav__logo-text {
+    font-size: 1.25rem;
+  }
+
+  .korion-nav__left {
+    gap: 14px;
+  }
+}

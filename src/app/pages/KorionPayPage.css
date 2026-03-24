@@ -1,0 +1,1322 @@
+.korionpay-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(88, 116, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 85% 18%, rgba(0, 214, 255, 0.08), transparent 24%),
+    linear-gradient(180deg, #050816 0%, #070b16 38%, #04070f 100%);
+  color: #ffffff;
+}
+
+.korionpay-page__container {
+  width: min(1440px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.korionpay-page__container-01 {
+  width: min(1240px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.korionpay-section {
+  position: relative;
+  padding: 110px 0;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 920px;
+}
+
+.korionpay-section--deep {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(79, 70, 229, 0.09), transparent 35%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0));
+}
+
+.korionpay-section__head {
+  max-width: 920px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.korionpay-section__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid rgba(120, 150, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.56);
+  color: #b7c7ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  backdrop-filter: blur(14px);
+}
+
+.korionpay-section__head h2 {
+  margin: 18px 0 16px;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.korionpay-section__head p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.78);
+  font-size: 1.03rem;
+  line-height: 1.9;
+}
+
+.korionpay-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 90px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  isolation: isolate;
+}
+
+.korionpay-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(83, 109, 254, 0.24), transparent 24%),
+    radial-gradient(circle at 78% 30%, rgba(0, 220, 255, 0.18), transparent 22%),
+    radial-gradient(circle at 50% 100%, rgba(124, 58, 237, 0.12), transparent 30%);
+  filter: blur(6px);
+  z-index: 0;
+}
+
+.korionpay-hero__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 92%);
+  opacity: 0.18;
+  
+}
+
+.korionpay-hero .korionpay-page__container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(460px, 0.92fr);
+  gap: 46px;
+  align-items: center;
+}
+
+
+
+.korionpay-hero__content {
+  position: relative;
+}
+
+.korionpay-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(113, 180, 255, 0.24);
+  background: rgba(10, 16, 34, 0.7);
+  color: #c3d3ff;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+.korionpay-hero__title {
+  margin: 0;
+  font-size: clamp(2.9rem, 6vw, 3.6rem);
+  line-height: 1.1;  letter-spacing: -0.055em;
+  font-weight: 800;
+}
+
+.korionpay-hero__title span {
+  display: inline-block;
+  background: linear-gradient(90deg, #9ec8ff 0%, #8d9eff 42%, #82f1ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.korionpay-hero__desc {
+  max-width: 760px;
+  margin: 36px 0 0;
+  color: rgba(226, 232, 240, 0.82);
+  font-size: 1.08rem;
+  line-height: 1.95;
+}
+
+.korionpay-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.korionpay-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 22px;
+  border-radius: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.korionpay-btn:hover {
+  transform: translateY(-2px);
+}
+
+.korionpay-btn--primary {
+  color: #ffffff;
+  border: 1px solid rgba(110, 157, 255, 0.28);
+  background: linear-gradient(135deg, rgba(77, 111, 255, 0.96), rgba(60, 189, 255, 0.86));
+  box-shadow: 0 18px 45px rgba(43, 91, 255, 0.26);
+}
+
+.korionpay-btn--ghost {
+  color: #dbe6ff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(11, 18, 34, 0.58);
+  backdrop-filter: blur(16px);
+}
+
+.korionpay-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 36px;
+  margin-bottom: 80px;
+}
+
+.korionpay-stat {
+  padding: 18px 18px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(13, 19, 39, 0.88), rgba(8, 13, 28, 0.72));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 16px 45px rgba(0, 0, 0, 0.18);
+}
+
+.korionpay-stat strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.korionpay-stat span {
+  color: rgba(226, 232, 240, 0.68);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.korionpay-hero__visual {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  contain: layout paint;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.korionpay-orbit,
+.korionpay-glow {
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.korionpay-orbit--one {
+  width: 560px;
+  height: 560px;
+  border: 1px solid rgba(125, 157, 255, 0.14);
+  box-shadow: inset 0 0 60px rgba(100, 126, 255, 0.06);
+  animation: korionpay-spin 24s linear infinite;
+}
+
+.korionpay-orbit--two {
+  width: 430px;
+  height: 430px;
+  border: 1px dashed rgba(97, 219, 255, 0.16);
+  animation: korionpay-spin-reverse 20s linear infinite;
+}
+
+.korionpay-glow--one {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(71, 123, 255, 0.24), transparent 68%);
+  filter: blur(18px);
+}
+
+.korionpay-glow--two {
+  width: 180px;
+  height: 180px;
+  top: 12%;
+  right: 12%;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.24), transparent 70%);
+  filter: blur(20px);
+}
+
+.korionpay-device {
+  position: absolute;
+  width: 250px;
+  min-height: 360px;
+  border-radius: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  background:
+    linear-gradient(180deg, rgba(15, 22, 44, 0.92), rgba(8, 14, 27, 0.82)),
+    rgba(10, 16, 30, 0.68);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 26px 70px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.korionpay-device::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(124, 153, 255, 0.1), transparent 26%),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.08), transparent 35%);
+  pointer-events: none;
+}
+
+.korionpay-device--left {
+  left: 18px;
+  top: 128px;
+  transform: rotate(-9deg);
+}
+
+.korionpay-device--right {
+  right: 18px;
+  top: 116px;
+  transform: rotate(9deg);
+}
+
+.korionpay-device__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 22px 14px;
+  color: #dbe7ff;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.korionpay-device__body {
+  padding: 4px 22px 22px;
+}
+
+.korionpay-chip {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.28), transparent 36%),
+    linear-gradient(135deg, rgba(58, 67, 146, 0.623), rgba(51, 148, 170, 0.322));
+  box-shadow: 0 18px 40px rgba(76, 102, 255, 0.26);
+}
+
+.korionpay-chip--alt {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.28), transparent 36%),
+    linear-gradient(135deg, rgba(42, 176, 255, 0.92), rgba(118, 73, 255, 0.78));
+}
+
+.korionpay-line {
+  width: 100%;
+  height: 12px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.korionpay-line--short {
+  width: 66%;
+  margin-bottom: 20px;
+}
+
+.korionpay-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.korionpay-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #d8e4ff;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.korionpay-center-badge {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(135, 164, 255, 0.22);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.1), transparent 44%),
+    linear-gradient(180deg, rgba(18, 26, 50, 0.92), rgba(10, 16, 28, 0.86));
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.36),
+    inset 0 0 40px rgba(104, 129, 255, 0.1);
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.korionpay-center-badge__core {
+  width: 88px;
+  height: 88px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(80, 109, 255, 1), rgba(0, 212, 255, 0.88));
+  box-shadow: 0 16px 40px rgba(60, 118, 255, 0.38);
+}
+
+.korionpay-signal {
+  position: absolute;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  border-top: 1px solid rgba(122, 174, 255, 0.22);
+  border-right: 1px solid rgba(122, 174, 255, 0.22);
+  border-radius: 0 100% 0 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.korionpay-signal--left {
+  left: -108px;
+}
+
+.korionpay-signal--right {
+  right: -108px;
+  transform: translateY(-50%) rotate(225deg);
+}
+
+.korionpay-hero__caption {
+  position: absolute;
+  bottom: 82px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, 560px);
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(9, 14, 28, 0.72);
+  color: rgba(226, 232, 240, 0.74);
+  text-align: center;
+  font-size: 0.89rem;
+  line-height: 1.6;
+  backdrop-filter: blur(14px);
+}
+
+.korionpay-dual {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.korionpay-dual__card {
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(13, 20, 40, 0.92), rgba(9, 14, 26, 0.82));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 24px 60px rgba(0, 0, 0, 0.2);
+}
+
+.korionpay-dual__card--offline {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 24px 60px rgba(41, 83, 255, 0.1);
+}
+
+.korionpay-dual__card--online {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 24px 60px rgba(0, 194, 255, 0.08);
+}
+
+.korionpay-dual__top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.korionpay-dual__icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(79, 109, 255, 0.24), rgba(0, 208, 255, 0.16));
+  color: #d9e5ff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.korionpay-dual__top h3 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+}
+
+.korionpay-dual__top p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.7);
+  line-height: 1.6;
+}
+
+.korionpay-checklist {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.korionpay-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(236, 242, 255, 0.88);
+  line-height: 1.65;
+}
+
+.korionpay-checklist svg {
+  margin-top: 2px;
+  color: #90b5ff;
+  flex-shrink: 0;
+}
+
+.korionpay-feature-grid,
+.korionpay-patent-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.korionpay-feature-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.korionpay-patent-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.korionpay-feature-card,
+.korionpay-patent-card,
+.korionpay-sidecard,
+.korionpay-usecase,
+.korionpay-step {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(14, 20, 38, 0.92), rgba(8, 13, 24, 0.84));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 20px 50px rgba(0, 0, 0, 0.16);
+}
+
+.korionpay-feature-card {
+  padding: 26px;
+  border-radius: 24px;
+}
+
+.korionpay-feature-card__icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(87, 107, 255, 0.2), rgba(0, 204, 255, 0.14));
+  color: #dce7ff;
+  margin-bottom: 18px;
+}
+
+.korionpay-feature-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+.korionpay-feature-card p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.74);
+  line-height: 1.78;
+  font-size: 0.96rem;
+}
+
+.korionpay-patent-card {
+  position: relative;
+  padding: 28px;
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+.korionpay-patent-card__index {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: rgba(145, 172, 255, 0.72);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.korionpay-patent-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.16rem;
+  line-height: 1.4;
+}
+
+.korionpay-patent-card p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.74);
+  line-height: 1.8;
+  font-size: 0.96rem;
+}
+
+.korionpay-architecture-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.korionpay-flow-card {
+  min-height: 130px;
+  padding: 24px 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(13, 20, 40, 0.92), rgba(9, 14, 26, 0.82));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.korionpay-flow-card svg {
+  margin: 0 auto;
+  color: #b7caff;
+}
+
+.korionpay-flow-card strong {
+  font-size: 1rem;
+}
+
+.korionpay-flow-card span {
+  color: rgba(226, 232, 240, 0.68);
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+
+.korionpay-flow-arrow {
+  color: rgba(161, 181, 255, 0.55);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.korionpay-table-wrap {
+  overflow-x: auto;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(14, 20, 38, 0.92), rgba(8, 13, 24, 0.84));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.korionpay-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.korionpay-table th,
+.korionpay-table td {
+  padding: 20px 22px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.korionpay-table th {
+  color: #ffffff;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.korionpay-table td {
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.7;
+}
+
+.korionpay-usecases {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.korionpay-usecase {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 24px;
+  border-radius: 22px;
+}
+
+.korionpay-usecase__icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(80, 109, 255, 0.2), rgba(0, 208, 255, 0.14));
+  color: #dce7ff;
+}
+
+.korionpay-usecase h3 {
+  margin: 0 0 8px;
+  font-size: 1.08rem;
+}
+
+.korionpay-usecase p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.74);
+  line-height: 1.7;
+}
+
+.korionpay-simplicity {
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+  gap: 26px;
+  align-items: stretch;
+}
+
+.korionpay-simplicity__left {
+  padding: 36px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(82, 108, 255, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(14, 20, 38, 0.92), rgba(8, 13, 24, 0.84));
+}
+
+.korionpay-simplicity__left h2 {
+  margin: 18px 0 14px;
+  font-size: clamp(2rem, 3vw, 2.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.korionpay-simplicity__left p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.9;
+}
+
+.korionpay-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.korionpay-step {
+  padding: 28px 24px;
+  border-radius: 24px;
+}
+
+.korionpay-step span {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: rgba(151, 177, 255, 0.78);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.korionpay-step h3 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+}
+
+.korionpay-step p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.74);
+  line-height: 1.75;
+}
+
+.korionpay-investor {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  gap: 24px;
+}
+
+.korionpay-investor__panel {
+  padding: 34px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(0, 214, 255, 0.08), transparent 20%),
+    linear-gradient(180deg, rgba(14, 20, 38, 0.94), rgba(8, 13, 24, 0.86));
+}
+
+.korionpay-investor__panel h2 {
+  margin: 18px 0 22px;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.korionpay-investor__list {
+  display: grid;
+  gap: 16px;
+}
+
+.korionpay-investor__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.korionpay-investor__item svg {
+  margin-top: 3px;
+  flex-shrink: 0;
+  color: #9ec0ff;
+}
+
+.korionpay-investor__item p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.8);
+  line-height: 1.8;
+}
+
+.korionpay-investor__side {
+  display: grid;
+  gap: 18px;
+}
+
+.korionpay-sidecard {
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.korionpay-sidecard svg {
+  color: #b8ccff;
+  margin-bottom: 14px;
+}
+
+.korionpay-sidecard h3 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+}
+
+.korionpay-sidecard p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.74);
+  line-height: 1.75;
+}
+
+.korionpay-cta-section {
+  padding: 0 0 120px;
+}
+
+.korionpay-cta-box {
+  position: relative;
+  overflow: hidden;
+  padding: 42px 38px;
+  border-radius: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(86, 107, 255, 0.16), transparent 24%),
+    radial-gradient(circle at 100% 0%, rgba(0, 204, 255, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(14, 20, 38, 0.96), rgba(8, 13, 24, 0.9));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 30px 70px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+.korionpay-cta-box h2 {
+  margin: 18px 0 14px;
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.korionpay-cta-box p {
+  max-width: 840px;
+  margin: 0 auto;
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.9;
+}
+
+.korionpay-cta-box__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+@keyframes korionpay-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes korionpay-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+
+@media (max-width: 768px) {
+  .korionpay-hero__visual{
+    margin-bottom: 100px;
+  }
+  .korionpay-page {
+    overflow-x: hidden;
+  }
+
+  .korionpay-page__container,
+  .korionpay-page__container-01 {
+    width: calc(100% - 24px);
+  }
+
+  .korionpay-section {
+    padding: 72px 0;
+  }
+
+  .korionpay-section__head {
+    margin-bottom: 30px;
+  }
+
+  .korionpay-section__label {
+    padding: 7px 12px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .korionpay-section__head h2 {
+    margin: 14px 0 12px;
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+    line-height: 1.15;
+  }
+
+  .korionpay-section__head p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  /* hero */
+  .korionpay-hero {
+    padding: 92px 0 60px;
+  }
+
+  .korionpay-hero .korionpay-page__container {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  .korionpay-hero__content {
+    order: 1;
+    text-align: center;
+  }
+
+  .korionpay-hero__eyebrow {
+    margin: 0 auto 16px;
+    justify-content: center;
+  }
+
+  .korionpay-hero__title {
+    font-size: clamp(2rem, 10vw, 2.9rem);
+    line-height: 1.06;
+    letter-spacing: -0.045em;
+  }
+
+  .korionpay-hero__desc {
+    max-width: 100%;
+    margin: 22px auto 0;
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .korionpay-hero__cta {
+    justify-content: center;
+    margin-top: 26px;
+    gap: 10px;
+  }
+
+  .korionpay-btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 18px;
+    border-radius: 14px;
+  }
+
+  .korionpay-hero__stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 28px;
+    margin-bottom: 0;
+  }
+
+  .korionpay-stat {
+    text-align: left;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  /* visual */
+  .korionpay-hero__visual {
+    order: 2;
+    min-height: 360px;
+    margin-top: 4px;
+  }
+
+  .korionpay-orbit--one {
+    width: 300px;
+    height: 300px;
+  }
+
+  .korionpay-orbit--two {
+    width: 230px;
+    height: 230px;
+  }
+
+  .korionpay-glow--one {
+    width: 180px;
+    height: 180px;
+  }
+
+  .korionpay-glow--two {
+    width: 110px;
+    height: 110px;
+    top: 10%;
+    right: 10%;
+  }
+
+  .korionpay-device {
+    width: 138px;
+    min-height: 220px;
+    border-radius: 22px;
+  }
+
+  .korionpay-device--left {
+    left: 50%;
+    top: 105px;
+    transform: translateX(-112%) rotate(-7deg);
+  }
+
+  .korionpay-device--right {
+    right: 50%;
+    top: 98px;
+    transform: translateX(112%) rotate(7deg);
+  }
+
+  .korionpay-device__header {
+    padding: 14px 14px 10px;
+    gap: 8px;
+    font-size: 0.78rem;
+  }
+
+  .korionpay-device__body {
+    padding: 2px 14px 14px;
+  }
+
+  .korionpay-chip {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+  }
+
+  .korionpay-line {
+    height: 10px;
+    margin-bottom: 10px;
+  }
+
+  .korionpay-line--short {
+    margin-bottom: 14px;
+  }
+
+  .korionpay-tags {
+    gap: 10px;
+  }
+
+  .korionpay-tags span {
+    min-height: 26px;
+    padding: 0 8px;
+    font-size: 0.7rem;
+  }
+
+  .korionpay-center-badge {
+    width: 94px;
+    height: 94px;
+  }
+
+  .korionpay-center-badge__core {
+    width: 52px;
+    height: 52px;
+  }
+
+  .korionpay-signal {
+    width: 64px;
+    height: 64px;
+  }
+
+  .korionpay-signal--left {
+    left: -58px;
+  }
+
+  .korionpay-signal--right {
+    right: -58px;
+  }
+
+  .korionpay-hero__caption {
+    position: absolute ;
+    transform: none;
+    width: 200px;
+    height: 100px;
+    margin-top: 24px;
+    padding: 12px 14px;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    bottom: -120px;
+    left: -60px;
+  }
+
+  /* cards / grids */
+  .korionpay-dual,
+  .korionpay-feature-grid,
+  .korionpay-patent-grid,
+  .korionpay-usecases,
+  .korionpay-steps,
+  .korionpay-investor,
+  .korionpay-simplicity {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .korionpay-dual__card,
+  .korionpay-feature-card,
+  .korionpay-patent-card,
+  .korionpay-usecase,
+  .korionpay-step,
+  .korionpay-sidecard,
+  .korionpay-simplicity__left,
+  .korionpay-investor__panel,
+  .korionpay-cta-box {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .korionpay-dual__top {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .korionpay-dual__icon,
+  .korionpay-feature-card__icon,
+  .korionpay-usecase__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  .korionpay-dual__top h3,
+  .korionpay-feature-card h3,
+  .korionpay-patent-card h3,
+  .korionpay-usecase h3,
+  .korionpay-step h3,
+  .korionpay-sidecard h3 {
+    font-size: 1rem;
+  }
+
+  .korionpay-feature-card p,
+  .korionpay-patent-card p,
+  .korionpay-usecase p,
+  .korionpay-step p,
+  .korionpay-sidecard p,
+  .korionpay-dual__top p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  /* architecture flow */
+  .korionpay-architecture-flow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .korionpay-flow-card {
+    min-height: auto;
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .korionpay-flow-arrow {
+    display: none;
+  }
+
+  /* table */
+  .korionpay-table-wrap {
+    border-radius: 20px;
+  }
+
+  .korionpay-table {
+    min-width: 680px;
+  }
+
+  .korionpay-table th,
+  .korionpay-table td {
+    padding: 16px 14px;
+    font-size: 0.9rem;
+  }
+
+  /* simplicity / investor / cta */
+  .korionpay-simplicity__left h2,
+  .korionpay-investor__panel h2,
+  .korionpay-cta-box h2 {
+    font-size: clamp(1.7rem, 7vw, 2.3rem);
+    line-height: 1.12;
+  }
+
+  .korionpay-cta-box__actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .korionpay-cta-box__actions .korionpay-btn {
+    width: 100%;
+  }
+
+  .korionpay-cta-section {
+    padding: 0 0 80px;
+  }
+}
+
+
+/* extra small devices */
+@media (max-width: 480px) {
+  .korionpay-page__container,
+  .korionpay-page__container-01 {
+    width: calc(100% - 18px);
+  }
+
+  .korionpay-section {
+    padding: 60px 0;
+  }
+
+  .korionpay-hero {
+    padding: 84px 0 54px;
+  }
+
+  .korionpay-hero__title {
+    font-size: clamp(1.8rem, 11vw, 2.4rem);
+  }
+
+  .korionpay-hero__desc {
+    font-size: 0.93rem;
+  }
+
+  .korionpay-hero__visual {
+    min-height: 310px;
+  }
+
+  .korionpay-device {
+    width: 148px;
+    min-height: 222px;
+  }
+
+  .korionpay-device--left {
+    transform: translateX(-105%) rotate(-6deg);
+    top: 42px;
+  }
+
+  .korionpay-device--right {
+    transform: translateX(105%) rotate(6deg);
+    top: 48px;
+  }
+
+  .korionpay-center-badge {
+    width: 82px;
+    height: 82px;
+  }
+
+  .korionpay-center-badge__core {
+    width: 46px;
+    height: 46px;
+  }
+
+  .korionpay-signal {
+    display: none;
+  }
+
+  .korionpay-stat,
+  .korionpay-dual__card,
+  .korionpay-feature-card,
+  .korionpay-patent-card,
+  .korionpay-usecase,
+  .korionpay-step,
+  .korionpay-sidecard,
+  .korionpay-simplicity__left,
+  .korionpay-investor__panel,
+  .korionpay-cta-box {
+    padding: 18px;
+  }
+}

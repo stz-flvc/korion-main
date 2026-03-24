@@ -1,0 +1,665 @@
+.developers-webhooks-page {
+    min-height: 100vh;
+    background: #f4f5f7;
+    color: #1f2f44;
+    }
+
+    .developers-webhooks-page__container {
+    width: min(1320px, calc(100% - 40px));
+    margin: 0 auto;
+    }
+
+    .developers-webhooks-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: linear-gradient(180deg, #0a1020 0%, #0c1224 100%);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .developers-webhooks-topbar__inner {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    }
+
+    .developers-webhooks-topbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    }
+
+    .developers-webhooks-topbar__brand-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #7c92ff 0%, #7c5dff 100%);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 900;
+    }
+
+    .developers-webhooks-topbar__nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    }
+
+    .developers-webhooks-topbar__nav a {
+    color: rgba(230,236,255,0.82);
+    text-decoration: none;
+    font-weight: 700;
+    }
+
+    .developers-webhooks-topbar__nav a.is-active,
+    .developers-webhooks-topbar__nav a:hover {
+    color: #fff;
+    }
+
+    .developers-webhooks-hero {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(124,146,255,0.18), transparent 24%),
+        radial-gradient(circle at 80% 10%, rgba(125,92,255,0.18), transparent 24%),
+        linear-gradient(180deg, #0b1325 0%, #101b34 100%);
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .developers-webhooks-hero .developers-webhooks-page__container {
+    padding: 56px 0 48px;
+    }
+
+    .developers-webhooks-hero__crumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    }
+
+    .developers-webhooks-hero__crumbs a,
+    .developers-webhooks-hero__crumbs span {
+    color: #d5e0ff;
+    text-decoration: none;
+    font-weight: 700;
+    }
+
+    .developers-webhooks-hero h1 {
+    margin: 0 0 14px;
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+    font-weight: 950;
+    }
+
+    .developers-webhooks-hero p {
+    margin: 0;
+    max-width: 840px;
+    color: rgba(234,240,255,0.82);
+    line-height: 1.85;
+    }
+
+    .developers-webhooks-body__grid {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+    }
+
+    .developers-webhooks-sidebar {
+    position: sticky;
+    top: 96px;
+    align-self: start;
+    }
+
+    .developers-webhooks-sidebar__box {
+    background: #fff;
+    border: 1px solid #e3e7ee;
+    border-radius: 16px;
+    padding: 18px 16px;
+    }
+
+    .developers-webhooks-sidebar__title {
+    display: block;
+    margin-bottom: 12px;
+    color: #7c8797;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    }
+
+    .developers-webhooks-sidebar__box a {
+    display: block;
+    text-decoration: none;
+    color: #46566a;
+    padding: 8px 0;
+    font-weight: 600;
+    }
+
+    .developers-webhooks-main {
+    background: #fff;
+    border: 1px solid #e3e7ee;
+    border-radius: 18px;
+    padding: 32px;
+    }
+
+    .developers-webhooks-section + .developers-webhooks-section {
+    margin-top: 40px;
+    }
+
+    .developers-webhooks-section h2 {
+    margin: 0 0 12px;
+    font-size: 1.85rem;
+    color: #1f3048;
+    letter-spacing: -0.03em;
+    }
+
+    .developers-webhooks-section p {
+    margin: 0;
+    color: #455569;
+    line-height: 1.85;
+    }
+
+    .developers-webhooks-divider {
+    height: 1px;
+    background: #e8ecf2;
+    margin: 0 0 18px;
+    }
+
+    .developers-webhooks-section__heading {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    }
+
+    .developers-webhooks-section__icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(124,146,255,0.14), rgba(124,93,255,0.12));
+    color: #5166d2;
+    flex: 0 0 auto;
+    }
+
+    .developers-webhooks-events,
+    .developers-webhooks-recommendations {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    }
+
+    .developers-webhooks-event,
+    .developers-webhooks-recommendations div {
+    border: 1px solid #e7ebf1;
+    border-radius: 16px;
+    background: #fafbfd;
+    padding: 18px 16px;
+    }
+
+    .developers-webhooks-event code {
+    display: inline-block;
+    margin-bottom: 8px;
+    background: #eef3ff;
+    color: #334a83;
+    border-radius: 10px;
+    padding: 7px 10px;
+    font-size: 0.82rem;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    .developers-webhooks-event span {
+    display: block;
+    color: #455569;
+    line-height: 1.7;
+    }
+
+    .developers-webhooks-list {
+    margin: 0;
+    padding-left: 18px;
+    color: #324257;
+    line-height: 1.9;
+    }
+
+    .developers-webhooks-code {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0f172a;
+    }
+
+    .developers-webhooks-code__top {
+    display: flex;
+    gap: 8px;
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.04);
+    }
+
+    .developers-webhooks-code__top span {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.18);
+    }
+
+    .developers-webhooks-code pre {
+    margin: 0;
+    padding: 20px;
+    overflow-x: auto;
+    color: #dbe7ff;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    }
+
+
+    
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .developers-webhooks-page {
+        overflow-x: hidden;
+    }
+
+    .developers-webhooks-page__container {
+        width: calc(100% - 28px);
+    }
+
+    /* topbar */
+    .developers-webhooks-topbar__inner {
+        min-height: auto;
+        padding: 12px 0;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .developers-webhooks-topbar__brand {
+        flex: 0 0 auto;
+        min-width: 0;
+    }
+
+    .developers-webhooks-topbar__nav {
+        order: 3;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .developers-webhooks-topbar__nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .developers-webhooks-topbar__nav a {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 8px 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    /* hero */
+    .developers-webhooks-hero .developers-webhooks-page__container {
+        padding: 34px 0 34px;
+    }
+
+    .developers-webhooks-hero__crumbs {
+        margin-bottom: 14px;
+        font-size: 0.84rem;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .developers-webhooks-hero h1 {
+        font-size: clamp(2rem, 6vw, 2.9rem);
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .developers-webhooks-hero p {
+        max-width: 100%;
+        font-size: 0.96rem;
+        line-height: 1.72;
+    }
+
+    /* body */
+    .developers-webhooks-body__grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding-top: 18px;
+        padding-bottom: 36px;
+    }
+
+    .developers-webhooks-sidebar {
+        position: static;
+        top: auto;
+    }
+
+    .developers-webhooks-sidebar__box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .developers-webhooks-sidebar__title {
+        grid-column: 1 / -1;
+        margin-bottom: 4px;
+    }
+
+    .developers-webhooks-sidebar__box a {
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 0.88rem;
+        line-height: 1.35;
+        background: #fafbfd;
+    }
+
+    .developers-webhooks-main {
+        padding: 24px 20px 18px;
+        border-radius: 16px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .developers-webhooks-section + .developers-webhooks-section {
+        margin-top: 30px;
+    }
+
+    .developers-webhooks-section h2 {
+        font-size: 1.5rem;
+        line-height: 1.16;
+        margin-bottom: 10px;
+    }
+
+    .developers-webhooks-section p {
+        font-size: 0.94rem;
+        line-height: 1.72;
+    }
+
+    .developers-webhooks-divider {
+        margin-bottom: 14px;
+    }
+
+    .developers-webhooks-section__heading {
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .developers-webhooks-section__icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+    }
+
+    .developers-webhooks-events,
+    .developers-webhooks-recommendations {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .developers-webhooks-event,
+    .developers-webhooks-recommendations div {
+        padding: 16px 14px;
+        border-radius: 14px;
+    }
+
+    .developers-webhooks-event code {
+        font-size: 0.76rem;
+        padding: 7px 9px;
+        border-radius: 8px;
+    }
+
+    .developers-webhooks-event span,
+    .developers-webhooks-list,
+    .developers-webhooks-recommendations div {
+        font-size: 0.92rem;
+        line-height: 1.72;
+    }
+
+    .developers-webhooks-code {
+        border-radius: 16px;
+    }
+
+    .developers-webhooks-code__top {
+        padding: 12px 14px;
+    }
+
+    .developers-webhooks-code pre {
+        padding: 16px;
+        font-size: 0.84rem;
+        line-height: 1.66;
+    }
+    }
+
+    /* mobile */
+    @media (max-width: 768px) {
+    .developers-webhooks-page__container {
+        width: calc(100% - 20px);
+    }
+
+    /* topbar */
+    .developers-webhooks-topbar__inner {
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .developers-webhooks-topbar__brand {
+        gap: 8px;
+        font-size: 0.94rem;
+    }
+
+    .developers-webhooks-topbar__brand-badge {
+        width: 26px;
+        height: 26px;
+        border-radius: 7px;
+        font-size: 0.82rem;
+    }
+
+    .developers-webhooks-topbar__nav a {
+        padding: 8px 10px;
+        font-size: 0.82rem;
+    }
+
+    /* hero */
+    .developers-webhooks-hero .developers-webhooks-page__container {
+        padding: 26px 0 28px;
+    }
+
+    .developers-webhooks-hero__crumbs {
+        margin-bottom: 12px;
+        font-size: 0.78rem;
+    }
+
+    .developers-webhooks-hero h1 {
+        font-size: clamp(1.7rem, 8.4vw, 2.2rem);
+        line-height: 1.12;
+        margin-bottom: 10px;
+    }
+
+    .developers-webhooks-hero p {
+        font-size: 0.9rem;
+        line-height: 1.66;
+    }
+
+    /* body */
+    .developers-webhooks-body__grid {
+        gap: 14px;
+        padding-top: 14px;
+        padding-bottom: 28px;
+    }
+
+    .developers-webhooks-sidebar__box {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 14px;
+        background-color: #cbcfd8; 
+    }
+
+    .developers-webhooks-sidebar__title {
+        font-size: 0.76rem;
+        margin-bottom: 6px;
+    }
+
+    .developers-webhooks-sidebar__box a {
+        width: 100%;
+        display: block;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 0.86rem;
+        white-space: normal;
+        background-color: #cbcfd8; 
+    }
+
+    .developers-webhooks-main {
+        padding: 16px 14px 12px;
+        border-radius: 14px;
+    }
+
+    .developers-webhooks-section + .developers-webhooks-section {
+        margin-top: 24px;
+    }
+
+    .developers-webhooks-section h2 {
+        font-size: 1.18rem;
+        margin-bottom: 8px;
+    }
+
+    .developers-webhooks-section p {
+        font-size: 0.88rem;
+        line-height: 1.64;
+    }
+
+    .developers-webhooks-section__heading {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .developers-webhooks-section__icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+
+    .developers-webhooks-events,
+    .developers-webhooks-recommendations {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .developers-webhooks-event,
+    .developers-webhooks-recommendations div {
+        padding: 14px 12px;
+        border-radius: 12px;
+    }
+
+    .developers-webhooks-event code {
+        max-width: 100%;
+        font-size: 0.72rem;
+        line-height: 1.45;
+        white-space: normal;
+        word-break: break-word;
+        padding: 7px 8px;
+    }
+
+    .developers-webhooks-event span,
+    .developers-webhooks-list,
+    .developers-webhooks-recommendations div {
+        font-size: 0.86rem;
+        line-height: 1.66;
+    }
+
+    .developers-webhooks-list {
+        padding-left: 16px;
+    }
+
+    .developers-webhooks-code {
+        border-radius: 14px;
+    }
+
+    .developers-webhooks-code__top {
+        padding: 11px 12px;
+    }
+
+    .developers-webhooks-code pre {
+        padding: 14px;
+        font-size: 0.76rem;
+        line-height: 1.56;
+    }
+    }
+
+    /* very small */
+    @media (max-width: 420px) {
+    .developers-webhooks-page__container {
+        width: calc(100% - 16px);
+    }
+
+    .developers-webhooks-topbar__brand {
+        font-size: 0.9rem;
+    }
+
+    .developers-webhooks-hero .developers-webhooks-page__container {
+        padding: 22px 0 24px;
+    }
+
+    .developers-webhooks-hero h1 {
+        font-size: 1.52rem;
+    }
+
+    .developers-webhooks-hero p,
+    .developers-webhooks-section p,
+    .developers-webhooks-event span,
+    .developers-webhooks-list,
+    .developers-webhooks-recommendations div {
+        font-size: 0.82rem;
+        line-height: 1.56;
+    }
+
+    .developers-webhooks-sidebar__box,
+    .developers-webhooks-main,
+    .developers-webhooks-event,
+    .developers-webhooks-recommendations div,
+    .developers-webhooks-code {
+        border-radius: 12px;
+    }
+
+    .developers-webhooks-sidebar__box {
+        padding: 12px;
+    }
+
+    .developers-webhooks-main {
+        padding: 14px 12px 10px;
+    }
+
+    .developers-webhooks-event,
+    .developers-webhooks-recommendations div {
+        padding: 12px;
+    }
+
+    .developers-webhooks-section h2 {
+        font-size: 1.06rem;
+    }
+
+    .developers-webhooks-code pre {
+        padding: 12px;
+        font-size: 0.72rem;
+    }
+    }

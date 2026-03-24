@@ -1,0 +1,468 @@
+.explorer-page {
+    min-height: 100vh;
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at 20% 10%, rgba(90,120,255,0.15), transparent 35%),
+        radial-gradient(circle at 80% 20%, rgba(160,80,255,0.12), transparent 40%),
+        linear-gradient(180deg,#05070f 0%,#060a18 50%,#05070f 100%);
+    }
+
+    /* container */
+
+    .explorer-page__container {
+    width: min(1440px, calc(100% - 40px));
+    margin: 0 auto;
+    }
+
+    /* hero */
+
+    .explorer-hero {
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 120px;
+    }
+
+    .explorer-hero__container {
+    display: flex;
+    justify-content: center;
+    }
+
+    /* hero content */
+
+    .explorer-hero__content {
+    max-width: 1440px;
+    text-align: center;
+    }
+
+    /* eyebrow */
+
+    .explorer-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: rgba(210,220,255,0.9);
+    }
+
+    .explorer-hero__eyebrow-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(135deg,#7ba5ff,#a96dff);
+
+    box-shadow: 0 0 12px rgba(140,160,255,0.7);
+    }
+
+    /* title */
+
+    .explorer-hero__title {
+    margin-top: 26px;
+    margin-bottom: 20px;
+
+    font-size: clamp(34px,5vw,56px);
+    font-weight: 900;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.04em;
+
+    white-space: pre-line;
+    }
+
+    /* description */
+
+    .explorer-hero__description {
+    color: rgba(210,220,240,0.75);
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+    max-width: 630px;
+
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    /* buttons */
+
+    .explorer-hero__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 30px;
+    }
+
+    .explorer-hero__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 52px;
+
+    padding: 0 20px;
+
+    border-radius: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all .25s ease;
+    }
+
+    .explorer-hero__button--primary {
+    background: linear-gradient(135deg,#5e7bff,#9c65ff);
+
+    color: #fff;
+
+    box-shadow: 0 12px 32px rgba(100,120,255,0.35);
+    }
+
+    .explorer-hero__button--primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 18px 40px rgba(100,120,255,0.45);
+    }
+
+    .explorer-hero__button--secondary {
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: rgba(255,255,255,0.05);
+
+    backdrop-filter: blur(10px);
+
+    color: #fff;
+    }
+
+    .explorer-hero__button--secondary:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(255,255,255,0.25);
+    }
+
+    /* contract strip */
+
+    .explorer-hero__contract-strip {
+    margin-top: 36px;
+    max-width: 640px;
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(12px);
+
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    /* label */
+
+    .explorer-hero__contract-label {
+    font-size: 12px;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+    color: rgba(200,210,240,0.6);
+    }
+
+    /* contract row */
+
+    .explorer-hero__contract-row {
+    margin-top: 12px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+    }
+
+    /* address */
+
+    .explorer-hero__contract-value {
+    font-size: 19px;
+
+    padding: 7px 16px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    word-break: break-all;
+    min-width: 490px;
+    }
+
+    /* copy button */
+
+    .explorer-hero__copy-button {
+    height: 42px;
+
+    padding: 0 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    background: linear-gradient(135deg,#607dff,#9c63ff);
+
+    color: white;
+
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+    }
+
+    .explorer-hero__copy-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow: 0 10px 24px rgba(100,120,255,0.35);
+    }
+
+    /* mobile */
+
+
+    
+
+
+
+
+
+@media (max-width: 1024px) {
+    .explorer-page {
+        overflow-x: hidden;
+    }
+
+    .explorer-page__container {
+        width: calc(100% - 28px);
+    }
+
+    .explorer-hero {
+        padding-top: 120px;
+        padding-bottom: 96px;
+    }
+
+    .explorer-hero__content {
+        max-width: 100%;
+    }
+
+    .explorer-hero__title {
+        font-size: clamp(30px, 6vw, 46px);
+        line-height: 1.2;
+        margin-top: 22px;
+        margin-bottom: 16px;
+    }
+
+    .explorer-hero__description {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .explorer-hero__actions {
+        margin-top: 24px;
+        gap: 12px;
+    }
+
+    .explorer-hero__button {
+        height: 48px;
+        padding: 0 18px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    .explorer-hero__contract-strip {
+        margin-top: 28px;
+        max-width: 100%;
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .explorer-hero__contract-row {
+        gap: 10px;
+    }
+
+    .explorer-hero__contract-value {
+        min-width: 0;
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .explorer-hero__copy-button {
+        height: 40px;
+        padding: 0 14px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+    }
+
+    @media (max-width: 768px) {
+    .explorer-page__container {
+        width: calc(100% - 20px);
+    }
+
+    .explorer-hero {
+        padding-top: 96px;
+        padding-bottom: 72px;
+    }
+
+    .explorer-hero__eyebrow {
+        padding: 7px 12px;
+        font-size: 12px;
+        gap: 7px;
+    }
+
+    .explorer-hero__eyebrow-dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .explorer-hero__title {
+        font-size: clamp(26px, 8vw, 36px);
+        line-height: 1.16;
+        margin-top: 18px;
+        margin-bottom: 14px;
+    }
+
+    .explorer-hero__description {
+        font-size: 14px;
+        line-height: 1.68;
+    }
+
+    .explorer-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    .explorer-hero__button {
+        width: 100%;
+        justify-content: center;
+        height: 46px;
+        padding: 0 16px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    .explorer-hero__contract-strip {
+        margin-top: 24px;
+        padding: 16px 14px;
+        border-radius: 16px;
+    }
+
+    .explorer-hero__contract-label {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+    }
+
+    .explorer-hero__contract-row {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .explorer-hero__contract-value {
+        min-width: 0;
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.55;
+        padding: 10px 12px;
+        text-align: left;
+    }
+
+    .explorer-hero__copy-button {
+        width: 100%;
+        justify-content: center;
+        height: 42px;
+        font-size: 13px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .explorer-page__container {
+        width: calc(100% - 16px);
+    }
+
+    .explorer-hero {
+        padding-top: 84px;
+        padding-bottom: 60px;
+    }
+
+    .explorer-hero__eyebrow {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .explorer-hero__title {
+        font-size: clamp(22px, 9vw, 30px);
+        line-height: 1.14;
+        margin-top: 16px;
+        margin-bottom: 12px;
+    }
+
+    .explorer-hero__description {
+        font-size: 13px;
+        line-height: 1.62;
+    }
+
+    .explorer-hero__button {
+        height: 42px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+
+    .explorer-hero__contract-strip {
+        padding: 14px 12px;
+        border-radius: 14px;
+    }
+
+    .explorer-hero__contract-value {
+        font-size: 12px;
+        padding: 9px 10px;
+        border-radius: 10px;
+    }
+
+    .explorer-hero__copy-button {
+        height: 40px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+    }

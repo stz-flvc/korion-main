@@ -1,0 +1,1033 @@
+.security-page {
+    min-height: 100vh;
+
+    color: #ffffff;
+    }
+
+    .security-page__container {
+    width: min(1440px, calc(100% - 40px));
+    margin: 0 auto;
+    padding-top: 116px;
+    padding-bottom: 30px;
+    }
+
+    .security-page__intro {
+    max-width: 980px;
+    margin: 0 auto 48px;
+    text-align: center;
+    }
+
+    .security-page__intro-badge {
+    width: fit-content;
+    margin: 0 auto 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(129, 151, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    color: #cfd7ff;
+    font-size: 0.92rem;
+    font-weight: 700;
+    box-shadow: 0 12px 32px rgba(10, 14, 35, 0.22);
+    }
+
+    .security-page__title {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.22;
+    letter-spacing: -0.045em;
+    font-weight: 900;
+    }
+
+    .security-page__lead {
+    margin: 22px auto 0;
+    max-width: 900px;
+    color: rgba(232, 236, 255, 0.72);
+    font-size: 1.05rem;
+    line-height: 1.9;
+    }
+
+    .security-page__protection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 82px !important;
+    max-width: 1240px;
+    margin: 0 auto;
+    }
+
+    .security-protection-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    padding: 28px 24px 24px;
+    border-radius: 28px;
+    border: 1px solid rgba(139, 158, 255, 0.14);
+    background:
+        radial-gradient(circle at top right, rgba(106, 131, 255, 0.08), transparent 34%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025)),
+        rgba(8, 14, 28, 0.84);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 20px 55px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(18px);
+    }
+
+    .security-protection-card__icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    color: #eef2ff;
+    background:
+        linear-gradient(135deg, rgba(127, 147, 255, 0.28), rgba(160, 116, 255, 0.18)),
+        rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(155, 171, 255, 0.18);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .security-protection-card__title {
+    margin: 0;
+    font-size: 1.18rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    }
+
+    .security-protection-card__desc {
+    margin: 14px 0 20px;
+    color: rgba(224, 230, 255, 0.74);
+    line-height: 1.78;
+    font-size: 0.985rem;
+    }
+
+    .security-protection-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    }
+
+    .security-protection-card__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: rgba(245, 247, 255, 0.92);
+    line-height: 1.6;
+    }
+
+    .security-protection-card__item svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: #a7bbff;
+    }
+
+    .security-page__guides,
+    .security-page__checklist-wrap,
+    .security-page__emergency {
+    margin-top: 84px !important;
+    max-width: 1240px;
+    margin: 0 auto;
+    }
+
+    .security-page__section-head {
+    max-width: 860px;
+    margin-bottom: 28px;
+    }
+
+    .security-page__section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(145, 164, 255, 0.14);
+    background: rgba(255, 255, 255, 0.035);
+    color: #d3dcff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    }
+
+    .security-page__section-head h2 {
+    margin: 0;
+    font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    font-weight: 850;
+    }
+
+    .security-page__section-head p {
+    margin: 14px 0 0;
+    color: rgba(224, 230, 255, 0.72);
+    line-height: 1.85;
+    }
+
+    .security-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    }
+
+    .security-guide-card {
+    position: relative;
+    overflow: hidden;
+    padding: 26px 24px;
+    border-radius: 26px;
+    border: 1px solid rgba(140, 158, 255, 0.14);
+    background:
+        radial-gradient(circle at top right, rgba(106, 131, 255, 0.06), transparent 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02)),
+        rgba(8, 13, 26, 0.82);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        0 18px 44px rgba(0, 0, 0, 0.2);
+    }
+
+    .security-guide-card__top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    }
+
+    .security-guide-card__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    background:
+        linear-gradient(135deg, rgba(117, 138, 255, 0.22), rgba(174, 121, 255, 0.15)),
+        rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(152, 167, 255, 0.14);
+    color: #edf2ff;
+    }
+
+    .security-guide-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    }
+
+    .security-guide-card p {
+    margin: 0;
+    color: rgba(227, 232, 255, 0.74);
+    line-height: 1.82;
+    font-size: 0.98rem;
+    }
+
+    .security-page__awareness {
+    margin-top: 72px;
+    }
+
+    .security-alert-card {
+    padding: 26px 26px 24px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 166, 124, 0.18);
+    background:
+        radial-gradient(circle at top right, rgba(255, 143, 91, 0.08), transparent 34%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018)),
+        rgba(17, 13, 16, 0.84);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        0 18px 48px rgba(0, 0, 0, 0.2);
+    max-width: 1240px;
+    margin: 0 auto;
+    }
+
+    .security-alert-card__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    }
+
+    .security-alert-card__icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, rgba(255, 166, 124, 0.2), rgba(255, 116, 116, 0.12));
+    border: 1px solid rgba(255, 176, 140, 0.18);
+    color: #ffd6bf;
+    }
+
+    .security-alert-card__header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 800;
+    }
+
+    .security-alert-card__header p {
+    margin: 8px 0 0;
+    color: rgba(255, 233, 221, 0.78);
+    line-height: 1.8;
+    }
+
+    .security-alert-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+    }
+
+    .security-alert-card__tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 190, 160, 0.14);
+    color: #ffe1d0;
+    font-size: 0.92rem;
+    font-weight: 700;
+    }
+
+    .security-checklist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 18px;
+    }
+
+    .security-checklist__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(136, 154, 255, 0.12);
+    background: rgba(255, 255, 255, 0.032);
+    color: rgba(245, 247, 255, 0.92);
+    line-height: 1.65;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .security-checklist__item svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #abc0ff;
+    }
+
+    .security-emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    }
+
+    .security-emergency-step {
+    padding: 24px 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(148, 165, 255, 0.12);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+        rgba(9, 14, 28, 0.82);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 16px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .security-emergency-step__index {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background:
+        linear-gradient(135deg, rgba(122, 143, 255, 0.24), rgba(170, 121, 255, 0.14)),
+        rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(155, 169, 255, 0.14);
+    color: #eef2ff;
+    font-weight: 900;
+    }
+
+    .security-emergency-step p {
+    margin: 0;
+    color: rgba(228, 233, 255, 0.76);
+    line-height: 1.8;
+    }
+
+    .security-page__cta {
+    margin-top: 94px;
+    }
+
+    .security-cta-card {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(380px, 0.55fr);
+    gap: 22px;
+    align-items: center;
+    padding: 24px 24px;
+    border-radius: 34px;
+    border: 1px solid rgba(144, 161, 255, 0.14);
+    background:
+        radial-gradient(circle at top right, rgba(102, 129, 255, 0.14), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(162, 112, 255, 0.12), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.025)),
+        rgba(8, 12, 26, 0.88);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.055),
+        0 22px 58px rgba(0, 0, 0, 0.24);
+    }
+
+    .security-cta-card__content {
+    position: relative;
+    z-index: 2;
+    }
+
+    .security-cta-card__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(145, 163, 255, 0.14);
+    color: #d8e0ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    }
+
+    .security-cta-card h2 {
+    margin: 0;
+    font-size: clamp(1.6rem, 3vw, 1.6rem);
+    line-height: 1.16;
+    letter-spacing: -0.03em;
+    font-weight: 900;
+    }
+
+    .security-cta-card p {
+    margin: 18px 0 0;
+    max-width: 1760px;
+    color: rgba(228, 233, 255, 0.74);
+    line-height: 1.88;
+    }
+
+    .security-cta-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 16px;
+    }
+
+    .security-cta-card__button {
+    min-height: 52px;
+    padding: 0 18px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        background 0.22s ease,
+        box-shadow 0.22s ease;
+    }
+
+    .security-cta-card__button:hover {
+    transform: translateY(-2px);
+    }
+
+    .security-cta-card__button--primary {
+    color: #ffffff;
+    background: linear-gradient(135deg, #7e7dff 0%, #a76bff 100%);
+    box-shadow: 0 14px 34px rgba(124, 107, 255, 0.3);
+    }
+
+    .security-cta-card__button--secondary {
+    color: #eef2ff;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(150, 168, 255, 0.16);
+    }
+
+    .security-cta-card__visual {
+    position: relative;
+    min-height: 15px;
+    display: grid;
+    place-items: center;
+    }
+
+    .security-cta-card__orb {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(12px);
+    }
+
+    .security-cta-card__orb--one {
+    width: 130px;
+    height: 130px;
+    background: rgba(126, 125, 255, 0.22);
+    top: -55px;
+    right: 14px;
+    }
+
+    .security-cta-card__orb--two {
+    width: 130px;
+    height: 130px;
+    background: rgba(165, 107, 255, 0.18);
+    bottom: -65px;
+    left: 18px;
+    }
+
+    .security-cta-card__shield {
+    position: relative;
+    z-index: 2;
+    width: 76px;
+    height: 76px;
+    border-radius: 24px;
+    display: grid;
+    place-items: center;
+    background:
+        linear-gradient(135deg, rgba(127, 145, 255, 0.28), rgba(167, 113, 255, 0.18)),
+        rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(162, 177, 255, 0.18);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 22px 54px rgba(0, 0, 0, 0.22);
+    color: #f5f7ff;
+    backdrop-filter: blur(12px);
+    }
+
+    .security-cta-card__mini {
+    position: absolute;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(158, 174, 255, 0.16);
+    color: #edf2ff;
+    backdrop-filter: blur(10px);
+    }
+
+    .security-cta-card__mini--a {
+    top: 54px;
+    left: 52px;
+    }
+
+    .security-cta-card__mini--b {
+    right: 46px;
+    bottom: 46px;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .security-page {
+    overflow-x: hidden;
+    }
+
+    .security-page__container {
+    width: calc(100% - 28px);
+    padding-top: 104px;
+    padding-bottom: 72px;
+    }
+
+    .security-page__intro {
+    margin: 0 auto 34px;
+    max-width: 100%;
+    }
+
+    .security-page__intro-badge {
+    margin-bottom: 16px;
+    padding: 9px 14px;
+    font-size: 0.82rem;
+    }
+
+    .security-page__title {
+    font-size: clamp(1.9rem, 6vw, 2.8rem);
+    line-height: 1.14;
+    }
+
+    .security-page__lead {
+    margin-top: 18px;
+    max-width: 100%;
+    font-size: 0.96rem;
+    line-height: 1.76;
+    }
+
+    .security-page__protection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 52px !important;
+    }
+
+    .security-protection-card {
+    padding: 22px 18px 18px;
+    border-radius: 22px;
+    }
+
+    .security-protection-card__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    }
+
+    .security-protection-card__title {
+    font-size: 1.02rem;
+    }
+
+    .security-protection-card__desc {
+    margin: 10px 0 16px;
+    font-size: 0.92rem;
+    line-height: 1.68;
+    }
+
+    .security-protection-card__list {
+    gap: 10px;
+    }
+
+    .security-protection-card__item {
+    font-size: 0.9rem;
+    line-height: 1.58;
+    }
+
+    .security-page__guides,
+    .security-page__checklist-wrap,
+    .security-page__emergency,
+    .security-page__cta {
+    margin-top: 58px !important;
+    }
+
+    .security-page__section-head {
+    max-width: 100%;
+    margin-bottom: 20px;
+    }
+
+    .security-page__section-kicker {
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    font-size: 0.82rem;
+    }
+
+    .security-page__section-head h2 {
+    font-size: clamp(1.35rem, 4vw, 2rem);
+    line-height: 1.18;
+    }
+
+    .security-page__section-head p {
+    margin-top: 12px;
+    font-size: 0.94rem;
+    line-height: 1.72;
+    }
+
+    .security-guide-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    }
+
+    .security-guide-card {
+    padding: 20px 18px;
+    border-radius: 22px;
+    }
+
+    .security-guide-card__top {
+    gap: 12px;
+    margin-bottom: 14px;
+    }
+
+    .security-guide-card__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+    }
+
+    .security-guide-card h3 {
+    font-size: 0.98rem;
+    }
+
+    .security-guide-card p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    }
+
+    .security-page__awareness {
+    margin-top: 54px;
+    }
+
+    .security-alert-card {
+    padding: 22px 20px 18px;
+    border-radius: 24px;
+    }
+
+    .security-alert-card__header {
+    gap: 12px;
+    }
+
+    .security-alert-card__icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    }
+
+    .security-alert-card__header h3 {
+    font-size: 1rem;
+    }
+
+    .security-alert-card__header p {
+    margin-top: 6px;
+    font-size: 0.92rem;
+    line-height: 1.68;
+    }
+
+    .security-alert-card__tags {
+    gap: 8px;
+    margin-top: 14px;
+    }
+
+    .security-alert-card__tags span {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 0.82rem;
+    }
+
+    .security-checklist {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    }
+
+    .security-checklist__item {
+    padding: 16px;
+    border-radius: 18px;
+    font-size: 0.9rem;
+    line-height: 1.58;
+    }
+
+    .security-emergency-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    }
+
+    .security-emergency-step {
+    padding: 18px 16px;
+    border-radius: 20px;
+    }
+
+    .security-emergency-step__index {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    }
+
+    .security-emergency-step p {
+    font-size: 0.92rem;
+    line-height: 1.68;
+    }
+
+    .security-cta-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px 20px;
+    border-radius: 24px;
+    }
+
+    .security-cta-card__badge {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 0.76rem;
+    }
+
+    .security-cta-card h2 {
+    font-size: clamp(1.35rem, 4vw, 1.9rem);
+    line-height: 1.18;
+    }
+
+    .security-cta-card p {
+    margin-top: 14px;
+    max-width: 100%;
+    font-size: 0.92rem;
+    line-height: 1.72;
+    }
+
+    .security-cta-card__actions {
+    gap: 10px;
+    margin-top: 14px;
+    }
+
+    .security-cta-card__button {
+    min-height: 46px;
+    padding: 0 16px;
+    border-radius: 13px;
+    font-size: 0.88rem;
+    }
+
+    .security-cta-card__visual {
+    min-height: 180px;
+    }
+
+    .security-cta-card__shield {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    }
+
+    .security-cta-card__mini {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    }
+
+    .security-cta-card__mini--a {
+    top: 48px;
+    left: 22%;
+    }
+
+    .security-cta-card__mini--b {
+    right: 22%;
+    bottom: 34px;
+    }
+
+    .security-cta-card__orb--one {
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    right: 12%;
+    }
+
+    .security-cta-card__orb--two {
+    width: 100px;
+    height: 100px;
+    bottom: -24px;
+    left: 14%;
+    }
+    }
+
+    @media (max-width: 768px) {
+    .security-page__container {
+    width: calc(100% - 20px);
+    padding-top: 92px;
+    padding-bottom: 60px;
+    }
+
+    .security-page__intro {
+    margin-bottom: 28px;
+    }
+
+    .security-page__intro-badge {
+    padding: 8px 12px;
+    font-size: 0.74rem;
+    gap: 6px;
+    }
+
+    .security-page__title {
+    font-size: clamp(1.65rem, 9vw, 2.2rem);
+    line-height: 1.12;
+    }
+
+    .security-page__lead {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    line-height: 1.68;
+    }
+
+    .security-page__protection-grid,
+    .security-guide-grid,
+    .security-checklist,
+    .security-emergency-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    }
+
+    .security-page__protection-grid {
+    margin-top: 38px !important;
+    }
+
+    .security-protection-card,
+    .security-guide-card,
+    .security-alert-card,
+    .security-emergency-step {
+    padding: 16px 14px;
+    border-radius: 18px;
+    }
+
+    .security-checklist__item {
+    padding: 14px;
+    border-radius: 16px;
+    }
+
+    .security-protection-card__icon,
+    .security-guide-card__icon,
+    .security-alert-card__icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    }
+
+    .security-protection-card__title,
+    .security-guide-card h3,
+    .security-alert-card__header h3 {
+    font-size: 0.94rem;
+    }
+
+    .security-protection-card__desc,
+    .security-guide-card p,
+    .security-alert-card__header p,
+    .security-checklist__item,
+    .security-emergency-step p,
+    .security-page__section-head p,
+    .security-cta-card p {
+    font-size: 0.86rem;
+    line-height: 1.64;
+    }
+
+    .security-page__guides,
+    .security-page__checklist-wrap,
+    .security-page__emergency,
+    .security-page__cta {
+    margin-top: 46px !important;
+    }
+
+    .security-page__section-kicker {
+    padding: 6px 10px;
+    font-size: 0.74rem;
+    }
+
+    .security-page__section-head h2 {
+    font-size: clamp(1.25rem, 6.5vw, 1.8rem);
+    }
+
+    .security-alert-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    }
+
+    .security-alert-card__tags span {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 0.74rem;
+    }
+
+    .security-emergency-step__index {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 0.84rem;
+    }
+
+    .security-cta-card {
+    padding: 18px 14px;
+    border-radius: 20px;
+    }
+
+    .security-cta-card__actions {
+    flex-direction: column;
+    align-items: stretch;
+    }
+
+    .security-cta-card__button {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+    font-size: 0.84rem;
+    }
+
+    .security-cta-card__visual {
+    min-height: 130px;
+    }
+
+    .security-cta-card__mini,
+    .security-cta-card__orb {
+    display: none;
+    }
+    }
+
+    @media (max-width: 420px) {
+    .security-page__container {
+    width: calc(100% - 16px);
+    padding-top: 84px;
+    padding-bottom: 52px;
+    }
+
+    .security-page__intro-badge {
+    font-size: 0.68rem;
+    padding: 7px 10px;
+    }
+
+    .security-page__title {
+    font-size: 1.5rem;
+    }
+
+    .security-page__lead,
+    .security-protection-card__desc,
+    .security-guide-card p,
+    .security-alert-card__header p,
+    .security-checklist__item,
+    .security-emergency-step p,
+    .security-page__section-head p,
+    .security-cta-card p {
+    font-size: 0.82rem;
+    line-height: 1.58;
+    }
+
+    .security-protection-card,
+    .security-guide-card,
+    .security-alert-card,
+    .security-checklist__item,
+    .security-emergency-step,
+    .security-cta-card {
+    border-radius: 16px;
+    }
+
+    .security-protection-card,
+    .security-guide-card,
+    .security-alert-card,
+    .security-emergency-step {
+    padding: 14px 12px;
+    }
+
+    .security-checklist__item {
+    padding: 12px;
+    }
+
+    .security-page__section-head h2 {
+    font-size: 1.18rem;
+    }
+
+    .security-cta-card h2 {
+    font-size: 1.2rem;
+    }
+
+    .security-cta-card__badge {
+    font-size: 0.68rem;
+    padding: 7px 10px;
+    }
+
+    .security-cta-card__shield {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    }
+    }

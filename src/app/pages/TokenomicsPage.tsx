@@ -1,0 +1,1122 @@
+import { motion } from 'motion/react';
+import {
+  Coins,
+  Flame,
+  ShieldCheck,
+  Layers3,
+  ArrowUpRight,
+  Wallet,
+  Pickaxe,
+  RefreshCw,
+  LockKeyhole,
+  Landmark,
+  CheckCircle2,
+  Sparkles,
+  BarChart3,
+  Database,
+  Boxes,
+  TrendingUp,
+  Orbit,
+  BadgeCheck,
+  ArrowRightLeft,
+} from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import './TokenomicsPage.css';
+
+const supplyFacts = [
+  {
+    labelEn: 'Network',
+    labelKo: '네트워크',
+    labelJa: 'ネットワーク',
+    labelZh: '网络',
+    value: 'TRON',
+  },
+  {
+    labelEn: 'Total Supply',
+    labelKo: '총발행량',
+    labelJa: '総発行量',
+    labelZh: '总供应量',
+    value: '10,000,000,000 KORION',
+  },
+  {
+    labelEn: 'Decimals',
+    labelKo: '소수점',
+    labelJa: '小数桁',
+    labelZh: '小数位数',
+    value: '6',
+  },
+];
+
+const structureCards = [
+  {
+    icon: Pickaxe,
+    titleEn: 'Reward Pool',
+    titleKo: '리워드 풀',
+    titleJa: '報酬プール',
+    titleZh: '奖励池',
+    descEn:
+      'A core portion of the supply is structured around reward and participation logic, including mobile mining and ecosystem contribution incentives.',
+    descKo:
+      '전체 공급 구조 중 핵심 물량은 모바일 채굴과 생태계 기여 보상을 포함한 리워드 및 참여 인센티브 중심으로 설계됩니다.',
+    descJa:
+      '供給の中核部分は、モバイルマイニングやエコシステム貢献のインセンティブなど、報酬と参加のロジックに基づいて構成されています。',
+    descZh:
+      '部分核心供应围绕奖励和参与逻辑构建，包括移动挖矿和生态系统贡献激励。',
+  },
+  {
+    icon: TrendingUp,
+    titleEn: 'Liquidity Layer',
+    titleKo: '유동성 레이어',
+    titleJa: '流動性レイヤー',
+    titleZh: '流动性层',
+    descEn:
+      'Liquidity is designed to support market accessibility, smoother circulation, and healthier entry and exit conditions across trading environments.',
+    descKo:
+      '유동성 물량은 시장 접근성, 원활한 유통, 보다 안정적인 거래 환경을 지원하는 구조로 설계됩니다.',
+    descJa:
+      '流動性は、市場へのアクセス性、円滑な流通、およびすべての取引環境においてより健全な参入・退出条件をサポートするように設計されています。',
+    descZh:
+      '流动性旨在支持各个交易环境中的市场可访问性、更顺畅的流通以更健康的进出条件。',
+  },
+  {
+    icon: LockKeyhole,
+    titleEn: 'Cold Wallet Reserve',
+    titleKo: '콜드월렛 리저브',
+    titleJa: 'コールドウォレットリザーブ',
+    titleZh: '冷钱包储备',
+    descEn:
+      'Strategic reserve assets can be separated from operational flows and managed for long-term security, treasury control, and supply discipline.',
+    descKo:
+      '전략 리저브 자산은 운영성 자금과 분리하여 장기 보안, 트레저리 통제, 공급 관리 목적에 맞게 운용될 수 있습니다.',
+    descJa:
+      '戦略的な準備資産は、運用フローから切り離し、長期的なセキュリティ、財務管理、および供給規律のために管理できます。',
+    descZh:
+      '战略储备资产可以与运营流分离，并为了长期安全性、金库控制和供应纪律进行管理。',
+  },
+  {
+    icon: Wallet,
+    titleEn: 'Operational Wallet Structure',
+    titleKo: '운영 지갑 구조',
+    titleJa: '運用ウォレット構造',
+    titleZh: '运营钱包结构',
+    descEn:
+      'The token model is built to connect platform operations, internal circulation, settlement flows, and scalable ecosystem usage.',
+    descKo:
+      '토큰 구조는 플랫폼 운영, 내부 순환, 정산 흐름, 확장 가능한 생태계 사용처와 연결되도록 설계됩니다.',
+    descJa:
+      'トークンモデルは、プラットフォームの運用、内部流通、決済フロー、そして拡張可能なエコシステムの利用を接続するために構築されています。',
+    descZh:
+      '代币模型的构建是为了连接平台运营、内部流通、结算流程和可扩展的生态系统使用。',
+  },
+];
+
+const utilityCards = [
+  {
+    icon: Wallet,
+    titleEn: 'Platform Utility',
+    titleKo: '플랫폼 실사용',
+    titleJa: 'プラットフォームのユーティリティ',
+    titleZh: '平台实用性',
+    descEn:
+      'KORION is designed to function inside the platform economy, not merely as a transferable token. This includes ecosystem services, internal utility, and transactional use cases.',
+    descKo:
+      'KORION은 단순 전송용 토큰이 단단한 플랫폼 경제 안에서 실제로 작동하는 자산으로 설계됩니다. 여기에는 생태계 서비스, 내부 유틸리티, 거래 사용처가 포함됩니다.',
+    descJa:
+      'KORIONは、単なる送金可能トークンとしてではなく、プラットフォーム経済の内部で機能するように設計されています。これには、エコシステムサービス、内部ユーティリティ、取引のユースケースが含まれます。',
+    descZh:
+      'KORION被设计在平台经济内部运作，而不仅仅作为可转移转账的代币。这包括生态系统服务、内部实用性和交易用例。',
+  },
+  {
+    icon: Pickaxe,
+    titleEn: 'Mobile Mining Participation',
+    titleKo: '모바일 채굴 참여',
+    titleJa: 'モバイルマイニングへの参加',
+    titleZh: '参与移动挖矿',
+    descEn:
+      'Mobile mining logic is positioned as a user acquisition and participation mechanism, encouraging continuous engagement and ecosystem expansion.',
+    descKo:
+      '모바일 채굴 구조는 사용자 유입과 참여를 유도하는 핵심 장치로 작동하며, 지속적인 생태계 확장을 뒷받침합니다.',
+    descJa:
+      'モバイルマイニングのロジックは、ユーザーの獲得と参加のメカニズムとして位置付けられており、継続的なエンゲージメントとエコシステムの拡大を促進します。',
+    descZh:
+      '移动挖矿逻辑被定位为用户获取和参与的机制，鼓励持续参与和生态系统扩展。',
+  },
+  {
+    icon: RefreshCw,
+    titleEn: 'Circulation & Reuse',
+    titleKo: '순환 및 재사용',
+    titleJa: '循環と再利用',
+    titleZh: '循环与复用',
+    descEn:
+      'KORION is intended to move through reward, holding, usage, settlement, and liquidity flows, forming an active circulation model rather than a static holding asset.',
+    descKo:
+      'KORION은 보상, 보유, 사용, 정산, 유동성 흐름을 거치며 순환하도록 설계되어 정적인 보관형 자산이 아닌 실제 순환형 모델을 지향합니다.',
+    descJa:
+      'KORIONは、報酬、保有、使用、決済、流動性のフローを通じて動き、静的な保有資産ではなく、活発な循環モデルを形成することを意図しています。',
+    descZh:
+      'KORION旨在通过奖励、持有、使用、结算和流动性流程流动，形成一个活跃的循环模型，而不是一个静态的持有资产。',
+  },
+  {
+    icon: Flame,
+    titleEn: 'Monthly Burn Logic',
+    titleKo: '월간 소각 구조',
+    titleJa: '毎月のバーン（焼却）ロジック',
+    titleZh: '每月销毁逻辑',
+    descEn:
+      '10% of monthly revenue generated by the operating platform is designed to be burned on a regular basis, reinforcing scarcity as ecosystem activity grows.',
+    descKo:
+      '자체 운영 플랫폼에서 발생한 월 수익의 10%를 정기적으로 소각하는 구조를 통해 생태계가 성장할수록 희소성을 강화하는 방향을 지향합니다.',
+    descJa:
+      'オペレーティングプラットフォームが生み出す月間収益の10％は、定期的にバーン（焼却）されるように設計されており、エコシステムの活動が活発になるにつれて希少性が強化されます。',
+    descZh:
+      '运营平台产生的月收入的首10%被设计为定期销毁，随着生态系统活动的增长，增强其稀缺性。',
+  },
+];
+
+const flowSteps = [
+  {
+    step: '01',
+    titleEn: 'Initial Supply Framework',
+    titleKo: '초기 공급 프레임',
+    titleJa: '初期供給フレームワーク',
+    titleZh: '初始供应框架',
+    descEn:
+      'KORION begins from a defined total supply framework on TRON, with operational categories such as reward, liquidity, reserve, and platform-related allocation logic.',
+    descKo:
+      'KORION은 TRON 기반의 총발행량 구조를 바탕으로 시작하며, 리워드, 유동성, 리저브, 플랫폼 운영 목적의 공급 카테고리로 구성됩니다.',
+    descJa:
+      'KORIONはTRON上の明確な総供給枠組みから始まり、報酬、流動性、準備金、プラットフォーム関連の割り当てロジックなどの運用カテゴリーを備えています。',
+    descZh:
+      'KORION从TRON上定义的总获取框架开始，包含奖励、流动性、准备金和操作类别。',
+  },
+  {
+    step: '02',
+    titleEn: 'User Participation Entry',
+    titleKo: '사용자 참여 유입',
+    titleJa: 'ユーザー参加の入り口',
+    titleZh: '用户参与入口',
+    descEn:
+      'Users can enter the ecosystem through wallet activity, mobile mining participation, service onboarding, and other ecosystem touchpoints.',
+    descKo:
+      '사용자는 지갑 활동, 모바일 채굴 참여, 서비스 온보딩, 기타 생태계 접점을 통해 KORION 생태계로 유입됩니다.',
+    descJa:
+      'ユーザーは、ウォレットのアクティビティ、モバイルマイニングの参加、サービスのオンボーディング、およびその他のエコシステムのタッチポイントを通じてエコシステムに参入できます。',
+    descZh:
+      '用户可以通过钱包活动、移动挖矿参与、服务入职和其他生态系统接触点进入生态系统。',
+  },
+  {
+    step: '03',
+    titleEn: 'Utility Activation',
+    titleKo: '실사용 활성화',
+    titleJa: 'ユーティリティの有効化',
+    titleZh: '实用性激活',
+    descEn:
+      'The token gains practical meaning when used inside the platform for service flows, payments, internal transactions, and ecosystem-linked value exchange.',
+    descKo:
+      '토큰은 플랫폼 안에서 서비스 흐름, 결제, 내부 거래, 생태계 연동 가치 교환에 사용될 때 실질적인 의미를 갖게 됩니다.',
+    descJa:
+      'トークンは、サービスフロー、支払い、内部トランザクション、およびエコシステムにリンクされた価値の交換のためにプラットフォーム内で使用されるときに、実用的な意味を持ちます。',
+    descZh:
+      '当代币在平台内部用于服务流、支付、内部交易和与生态系统相关的价值交换时，它获得了实际意义。',
+  },
+  {
+    step: '04',
+    titleEn: 'Revenue-Linked Scarcity',
+    titleKo: '수익 연동 희소성',
+    titleJa: '収益に連動した希少性',
+    titleZh: '与收入挂钩的稀缺性',
+    descEn:
+      'As the platform expands, monthly revenue-linked burn mechanics help recycle value back into supply discipline and long-term sustainability.',
+    descKo:
+      '플랫폼이 확장될수록 월 수익 연동 소각 구조가 공급 통제와 장기 지속 가능성으로 다시 연결되는 흐름을 형성합니다.',
+    descJa:
+      'プラットフォームが拡大するにつれて、月間収益に連動したバーン（焼却）のメカニズムにより、価値を供給規律と長期的な持続可能性に還元するのに役立ちます。',
+    descZh:
+      '随着平台的扩张，与每月收入相关的的销毁机制有助于价值循环。',
+  },
+];
+
+const governanceItems = [
+  {
+    icon: ShieldCheck,
+    titleEn: 'Treasury Discipline',
+    titleKo: '트레저리 운영 원칙',
+    titleJa: 'トレジャリー（財務）規律',
+    titleZh: '金库纪律',
+    descEn:
+      'Long-term trust depends on disciplined reserve management and clear separation between strategic assets and daily operations.',
+    descKo:
+      '장기 신뢰는 전략 자산과 일상 운영 자산을 분리하고 일관된 원칙으로 관리하는 데서 형성됩니다.',
+    descJa:
+      '長期的な信頼は、規律ある準備金の管理と、戦略的資産と日常の運用との間の明確な分離にかかっています。',
+    descZh:
+      '长期的信任取决于有纪律的储备管理以及战略资产与日常运营之间的清晰分离。',
+  },
+  {
+    icon: Database,
+    titleEn: 'Expandable Token Structure',
+    titleKo: '확장 가능한 발행 구조',
+    titleJa: '拡張可能なトークン構造',
+    titleZh: '可扩展代币结构',
+    descEn:
+      'The supply model is designed with the possibility of future change or additional issuance, making governance transparency especially important.',
+    descKo:
+      '공급 구조는 향후 변경 및 추가 발행 가능성을 포함하고 있기 때문에, 운영 투명성과 거버넌스 원칙이 더욱 중요합니다.',
+    descJa:
+      '供給モデルは将来の変更や追加発行の可能性を取り入れて設計されているため、ガバナンスの透明性が特に重要になります。',
+    descZh:
+      '供应模型的设计考虑到了未来变化或额外发行的可能性，这使得治理的透明度尤为重要。',
+  },
+  {
+    icon: Landmark,
+    titleEn: 'Real-Economy Orientation',
+    titleKo: '실물형 생태계 지향',
+    titleJa: '実体経済志向',
+    titleZh: '实体经济导向',
+    descEn:
+      'The token model is aimed at supporting real platform activity, service usage, and internal ecosystem value exchange rather than relying only on market speculation.',
+    descKo:
+      '토큰 구조는 단순 시세 중심이 아니라 플랫폼 실사용, 서비스 이용, 내부 생태계 가치 교환을 뒷받침하는 방향을 지향합니다.',
+    descJa:
+      'トークンモデルは、単なる市場の投機に頼るのではなく、実際のプラットフォーム活動、サービスの利用、内部エコシステムの価値交換をサポートすることを目的としています。',
+    descZh:
+      '代币模型旨在专门支持真实平台活动。',
+  },
+];
+
+const supplyModelStats = [
+  {
+    labelEn: 'Total Supply Framework',
+    labelKo: '총공급 프레임',
+    labelJa: '総供給フレームワーク',
+    labelZh: '总供应框架',
+    value: '10B',
+    subEn: 'KORION',
+    subKo: 'KORION',
+    subJa: 'KORION',
+    subZh: 'KORION',
+  },
+  {
+    labelEn: 'Revenue Burn Rule',
+    labelKo: '수익 소각 규칙',
+    labelJa: '収益バーンルール',
+    labelZh: '收入销毁规则',
+    value: '10%',
+    subEn: 'Monthly Platform Revenue',
+    subKo: '월 플랫폼 수익',
+    subJa: '毎月のプラットフォーム収益',
+    subZh: '每月平台收入',
+  },
+  {
+    labelEn: 'Settlement Base',
+    labelKo: '기반 네트워크',
+    labelJa: '決済基盤',
+    labelZh: '结算基础',
+    value: 'TRON',
+    subEn: 'TRC-Based Ecosystem',
+    subKo: 'TRC 기반 생태계',
+    subJa: 'TRCベースのエコシステム',
+    subZh: '基于TRC的生态系统',
+  },
+  {
+    labelEn: 'Precision',
+    labelKo: '소수점 체계',
+    labelJa: '精度',
+    labelZh: '精度',
+    value: '6',
+    subEn: 'Token Decimals',
+    subKo: '토큰 소수점',
+    subJa: 'トークンの小数点',
+    subZh: '代币小数位数',
+  },
+];
+
+const burnSimulationRows = [
+  {
+    scenarioEn: 'Early Stage',
+    scenarioKo: '초기 단계',
+    scenarioJa: '初期段階',
+    scenarioZh: '早期阶段',
+    revenue: '$50,000',
+    burn: '$5,000',
+    effectEn: 'Light but steady burn pressure begins to build token scarcity.',
+    effectKo: '작지만 지속적인 소각 압력이 형성되며 희소성이 시작됩니다.',
+    effectJa: '軽くても着実なバーン圧力がかかり始め、トークンの希少性が高まり始めます。',
+    effectZh: '轻微但稳定的销毁压力开始建立代币稀缺性。',
+  },
+  {
+    scenarioEn: 'Growth Stage',
+    scenarioKo: '성장 단계',
+    scenarioJa: '成長段階',
+    scenarioZh: '增长阶段',
+    revenue: '$250,000',
+    burn: '$25,000',
+    effectEn: 'Platform expansion starts producing visible deflationary effects.',
+    effectKo: '플랫폼 성장에 따라 체감 가능한 디플레이션 효과가 나타나기 시작합니다.',
+    effectJa: 'プラットフォームの拡大により、目に見えるデフレ効果が生じ始めます。',
+    effectZh: '平台扩张开始产生可见的通缩效用。',
+  },
+  {
+    scenarioEn: 'Scale Stage',
+    scenarioKo: '확장 단계',
+    scenarioJa: 'スケール段階',
+    scenarioZh: '规模阶段',
+    revenue: '$1,000,000',
+    burn: '$100,000',
+    effectEn: 'Revenue-linked burn becomes a major long-term scarcity driver.',
+    effectKo: '수익 연동 소각이 장기 희소성의 핵심 축으로 작동하게 됩니다.',
+    effectJa: '収益に連動したバーンは、長期的な希少性の主要な牽引力となります。',
+    effectZh: '与收入挂钩的销毁成为一个长期的主要的稀缺驱动力。',
+  },
+];
+
+const walletArchitecture = [
+  {
+    key: 'reward',
+    titleEn: 'Reward Pool',
+    titleKo: '리워드 풀',
+    titleJa: '報酬プール',
+    titleZh: '奖励池',
+    descEn:
+      'Used for mining rewards, participation incentives, and ecosystem activity distribution.',
+    descKo:
+      '채굴 보상, 참여 인센티브, 생태계 활동 보상 분배에 사용되는 핵심 리워드 영역입니다.',
+    descJa:
+      'マイニング報酬、参加のインセンティブ、およびエコシステム活動の分配に使用されます。',
+    descZh:
+      '用于挖矿奖励、参与激励和生态系统活动分配。',
+  },
+  {
+    key: 'liquidity',
+    titleEn: 'Liquidity Wallet',
+    titleKo: '유동성 지갑',
+    titleJa: '流動性ウォレット',
+    titleZh: '流动性钱包',
+    descEn:
+      'Supports market accessibility, smoother swaps, and trading environment stability.',
+    descKo:
+      '시장 접근성, 원활한 스왑, 거래 환경의 안정성을 지원하는 유동성 영역입니다.',
+    descJa:
+      '市場へのアクセス性、より円滑なスワップ、および取引環境の安定性をサポートします。',
+    descZh:
+      '支持市场可及性、更顺畅的兑换和交易环境的稳定性。',
+  },
+  {
+    key: 'hot',
+    titleEn: 'Hot Wallet',
+    titleKo: '핫월렛',
+    titleJa: 'ホットウォレット',
+    titleZh: '热钱包',
+    descEn:
+      'Handles active operational movement, platform processing, and live transaction flows.',
+    descKo:
+      '실시간 운영 이동, 플랫폼 처리, 활성 거래 흐름을 담당하는 운영 지갑입니다.',
+    descJa:
+      '活発な運用移動、プラットフォーム処理、およびライブのトランザクションフローを処理します。',
+    descZh:
+      '处理活跃的运营活动。',
+  },
+  {
+    key: 'cold',
+    titleEn: 'Cold Wallet',
+    titleKo: '콜드월렛',
+    titleJa: 'コールドウォレット',
+    titleZh: '冷钱包',
+    descEn:
+      'Protects strategic reserves with stronger isolation for long-term treasury security.',
+    descKo:
+      '장기 트레저리 보안을 위해 전략 리저브를 보다 강하게 분리 보관하는 구조입니다.',
+    descJa:
+      '長期的な財務の安全のために、より強力な分離によって戦略的な準備金を保護します。',
+    descZh:
+      '通过更强来保护储备。',
+  },
+  {
+    key: 'platform',
+    titleEn: 'Platform Utility',
+    titleKo: '플랫폼 유틸리티',
+    titleJa: 'プラットフォームのユーティリティ',
+    titleZh: '平台效用',
+    descEn:
+      'Connects token use with services, payments, internal value exchange, and product activity.',
+    descKo:
+      '서비스, 결제, 내부 가치 교환, 제품 활동과 토큰 사용을 연결하는 실사용 영역입니다.',
+    descJa:
+      'トークンの利用を、サービス、支払い、内部価値の交換、製品の活動に結び付けます。',
+    descZh:
+      '将代币使用连接。',
+  },
+  {
+    key: 'burn',
+    titleEn: 'Burn Engine',
+    titleKo: '소각 엔진',
+    titleJa: 'バーンエンジン',
+    titleZh: '销毁引擎',
+    descEn:
+      'Executes regular supply reduction based on 10% of monthly platform revenue.',
+    descKo:
+      '월 플랫폼 수익의 10%를 기준으로 정기적인 공급 감소를 수행하는 소각 구조입니다.',
+    descJa:
+      '月間プラットフォーム収益の10％に基づき、定期的な供給削減を実行します。',
+    descZh:
+      '执行基于收入削减供应。',
+  },
+];
+
+export function TokenomicsPage() {
+  const { t } = useLanguage();
+
+  return (
+    <div className="tokenomics-page">
+      <div className="tokenomics-page__ambient">
+        <span className="tokenomics-page__orb tokenomics-page__orb--1" />
+        <span className="tokenomics-page__orb tokenomics-page__orb--2" />
+        <span className="tokenomics-page__orb tokenomics-page__orb--3" />
+        <span className="tokenomics-page__beam tokenomics-page__beam--1" />
+        <span className="tokenomics-page__beam tokenomics-page__beam--2" />
+      </div>
+
+      <section className="tokenomics-hero">
+        <div className="tokenomics-page__container">
+          <div className="tokenomics-hero__grid">
+            <motion.div
+              className="tokenomics-hero__content"
+              initial={{ opacity: 0, y: 26 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="tokenomics-hero__eyebrow">
+                <Sparkles size={14} />
+                <span>{t('KORION Supply & Utility Model', 'KORION 공급 및 활용 모델', 'KORION 供給とユーティリティのモデル', 'KORION 供应加效用模型')}</span>
+              </div>
+
+              <h1 className="tokenomics-hero__title">
+                {t(
+                  'A Premium Tokenomics Model Connecting Utility, Participation, and Scarcity',
+                  '실사용, 참여, 희소성이 하나로 연결되는 KORION 토크노믹스',
+                  'ユーティリティ、参加、希少性を結びつけるプレミアムなトークノミクスモデル',
+                  '连接效用、参与和稀缺性的优质代币经济学模型'
+                )}
+              </h1>
+
+              <p className="tokenomics-hero__desc">
+                {t(
+                  'KORION is built on TRON as a utility-oriented digital asset designed to connect mobile mining participation, internal platform usage, ecosystem circulation, market accessibility, and revenue-linked burn mechanics.',
+                  'KORION은 TRON 기반으로 설계된 디지털 자산으로, 단순 보유형 토큰이 아니라 모바일 채굴 참여, 플랫폼 내부 실사용, 생태계 거래, 유동성 순환, 그리고 월 수익 10% 정기 소각 구조를 통해 장기적 가치를 강화하는 방향을 지향합니다.',
+                  'KORIONはTRON上で構築されており、モバイルマイニングの参加、内部プラットフォームでの利用、エコシステムの循環、市場へのアクセス、収益に連動したバーニメカニズムを結びつけるために設計された、ユーティリティ志向のデジタル資産です。',
+                  'KORION建立在TRON上，是一种以效用为导向的数字资产。'
+                )}
+              </p>
+
+              <div className="tokenomics-hero__stats">
+                {supplyFacts.map((item) => (
+                  <div key={item.labelEn} className="tokenomics-stat">
+                    <span className="tokenomics-stat__label">
+                      {t(item.labelEn, item.labelKo, item.labelJa, item.labelZh)}
+                    </span>
+                    <strong className="tokenomics-stat__value">{item.value}</strong>
+                  </div>
+                ))}
+              </div>
+
+              <div className="tokenomics-hero__featureline">
+                <div className="tokenomics-hero__featurepill">
+                  <BadgeCheck size={16} />
+                  <span>{t('Utility-Focused Design', '실사용 중심 설계', 'ユーティリティ重視のデザイン', '以实用性为重点的设计')}</span>
+                </div>
+                <div className="tokenomics-hero__featurepill">
+                  <Orbit size={16} />
+                  <span>{t('Circular Economy Model', '순환형 경제 모델', 'サーキュラーエコノミーモデル', '循环经济模型')}</span>
+                </div>
+                <div className="tokenomics-hero__featurepill">
+                  <Flame size={16} />
+                  <span>{t('10% Monthly Burn', '월 수익 10% 소각', '毎月10％のバーン', '每月10%的销毁')}</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="tokenomics-hero__visual"
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="tokenomics-orbit">
+                <div className="tokenomics-orbit__glow" />
+                <div className="tokenomics-orbit__ring tokenomics-orbit__ring--outer" />
+                <div className="tokenomics-orbit__ring tokenomics-orbit__ring--mid" />
+                <div className="tokenomics-orbit__ring tokenomics-orbit__ring--inner" />
+
+                <div className="tokenomics-orbit__pulse tokenomics-orbit__pulse--1" />
+                <div className="tokenomics-orbit__pulse tokenomics-orbit__pulse--2" />
+
+                <div className="tokenomics-orbit__core">
+                  <div className="tokenomics-orbit__core-badge">
+                    <Coins size={20} />
+                    <span>KORION</span>
+                  </div>
+                  <h3>{t('Utility Circulation Engine', '토큰 유틸리티 순환 구조', 'ユーティリティ循環エンジン', '效用循环引擎')}</h3>
+                  <p>
+                    {t(
+                      'A connected value loop from supply to participation, utility, circulation, and burn',
+                      '공급 → 참여 → 실사용 → 순환 → 소각으로 이어지는 가치 흐름',
+                      '供給から参加、ユーティリティ、循環、バーンへと連続する価値チェーン',
+                      '循环价值'
+                    )}
+                  </p>
+                </div>
+
+                <div className="tokenomics-orbit__node tokenomics-orbit__node--a">
+                  <Pickaxe size={16} />
+                  <span>{t('Mining', '채굴', 'マイニング', '挖矿')}</span>
+                </div>
+                <div className="tokenomics-orbit__node tokenomics-orbit__node--b">
+                  <Wallet size={16} />
+                  <span>{t('Utility', '유틸리티', 'ユーティリティ', '效用')}</span>
+                </div>
+                <div className="tokenomics-orbit__node tokenomics-orbit__node--c">
+                  <ArrowUpRight size={16} />
+                  <span>{t('Liquidity', '유동성', '流動性', '流动性')}</span>
+                </div>
+                <div className="tokenomics-orbit__node tokenomics-orbit__node--d">
+                  <Flame size={16} />
+                  <span>{t('Burn', '소각', 'バーン', '销毁')}</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="tokenomics-section">
+        <div className="tokenomics-page__container-01">
+          <motion.div
+            className="tokenomics-section__heading"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.65 }}
+          >
+            <span className="tokenomics-section__eyebrow">
+              <Layers3 size={15} />
+              {t('Supply Structure', 'Supply Structure', '供給構造', '供应结构')}
+            </span>
+            <h2>
+              {t(
+                'The Core Structural Pillars of the KORION Supply Model',
+                'KORION 공급 구조의 핵심 축',
+                'KORION供給モデルの核となる構造的柱',
+                'KORION供应模型的核心结构支柱'
+              )}
+            </h2>
+            <p>
+              {t(
+                'Rather than operating as a static issuance table, the KORION supply framework is designed around real functional roles across rewards, liquidity, reserves, and platform-level circulation.',
+                'KORION의 공급 구조는 단순 분배표보다, 실제 운영과 장기 생태계 확장을 위한 역할 중심 설계에 가깝습니다. 리워드, 유동성, 리저브, 운영 지갑 구조가 서로 분리되면서도 하나의 순환 모델 안에서 연결됩니다.',
+                '静的な発行テーブルとして運用されるのではなく、KORIONの供給枠組みは、報酬、流動性、準備金、プラットフォームレベルの循環など、実際の機能的役割を中心に設計されています。',
+                '代币结构旨在连接平台。'
+              )}
+            </p>
+          </motion.div>
+
+          <div className="tokenomics-utility__grid">
+            {structureCards.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.titleEn}
+                  className="tokenomics-utility__card"
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.55, delay: index * 0.06 }}
+                >
+                  <div className="tokenomics-utility__icon">
+                    <Icon size={20} />
+                  </div>
+                  <h3>{t(item.titleEn, item.titleKo, item.titleJa, item.titleZh)}</h3>
+                  <p>{t(item.descEn, item.descKo, item.descJa, item.descZh)}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="tokenomics-section tokenomics-section--alt">
+        <div className="tokenomics-page__container-01">
+          <div className="tokenomics-utility">
+            <motion.div
+              className="tokenomics-utility__left"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="tokenomics-section__eyebrow">
+                <BarChart3 size={15} />
+                {t('Utility Architecture', 'Utility Architecture', 'ユーティリティアーキテクチャ', '实用架构')}
+              </span>
+              <h2>
+                {t(
+                  'KORION Becomes Stronger When It Is Used, Not Merely Held',
+                  'KORION은 보유보다 사용될 때 더 강해집니다',
+                  'KORIONは単に保持されるだけでなく、使用されたときにより強くなります',
+                  '当KORION被使用，力量就越强'
+                )}
+              </h2>
+              <p>
+                {t(
+                  'The real strength of KORION lies not in static supply metrics but in active usage. Wallet interactions, internal platform utility, mining participation, rewards, liquidity, and burn-linked value recycling together define the token economy.',
+                  'KORION 토크노믹스의 핵심은 단순 공급량 자체가 아니라, 실제 사용 구조입니다. 지갑, 플랫폼, 내부 거래, 채굴 참여, 리워드 순환, 유동성, 그리고 수익 연동 소각까지 이어질 때 비로소 토큰 경제가 작동합니다.',
+                  'KORIONの真の強みは、静的な供給基準ではなく、積極的な利用にあります。ウォレットのインタラクション、内部プラットフォームのユーティリティ、モバイルマイニングの参加、報酬、流動性、バーンに関連した価値の再利用が一緒になって、トークンエコノミーを定義します。',
+                  'KORION真正的优势在于积极。'
+                )}
+              </p>
+
+              <div className="tokenomics-feature-points">
+                <div className="tokenomics-feature-point">
+                  <CheckCircle2 size={18} />
+                  <span>
+                    {t(
+                      'Participation-driven onboarding through mobile mining',
+                      '모바일 채굴과 사용자 참여 중심 유입 구조',
+                      'モバイルマイニングを通じた参加主導によるオンボーディング',
+                      '参与驱动型入门体验'
+                    )}
+                  </span>
+                </div>
+                <div className="tokenomics-feature-point">
+                  <CheckCircle2 size={18} />
+                  <span>
+                    {t(
+                      'Real utility connected to platform services and transactions',
+                      '플랫폼 내부 거래와 서비스에 연결되는 실사용 구조',
+                      'プラットフォームのサービスとトランザクションに結びついた真の実用性',
+                      '连接服务的实际'
+                    )}
+                  </span>
+                </div>
+                <div className="tokenomics-feature-point">
+                  <CheckCircle2 size={18} />
+                  <span>
+                    {t(
+                      'Long-term scarcity reinforced by 10% monthly revenue burn',
+                      '월 수익 10% 소각을 통한 장기 희소성 강화',
+                      '毎月10％の収益バーンによって補強される長期的な希少性',
+                      '被长期加强的稀缺性'
+                    )}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="tokenomics-utility__grid">
+              {utilityCards.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={item.titleEn}
+                    className="tokenomics-utility__card"
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    transition={{ duration: 0.55, delay: index * 0.06 }}
+                  >
+                    <div className="tokenomics-utility__icon">
+                      <Icon size={20} />
+                    </div>
+                    <h3>{t(item.titleEn, item.titleKo, item.titleJa, item.titleZh)}</h3>
+                    <p>{t(item.descEn, item.descKo, item.descJa, item.descZh)}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="tokenomics-section">
+        <div className="tokenomics-page__container-01">
+          <motion.div
+            className="tokenomics-section__heading"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65 }}
+          >
+            <span className="tokenomics-section__eyebrow">
+              <ArrowRightLeft size={15} />
+              {t('Value Flow', 'Value Flow', '価値のフロー', '价值流向')}
+            </span>
+            <h2>
+              {t(
+                'How Value Circulates Through the KORION Ecosystem',
+                'KORION 가치가 순환하는 방식',
+                'KORIONエコシステム内を価値がどのように循環するか',
+                'KORION生态系统中价值流通的方式'
+              )}
+            </h2>
+            <p>
+              {t(
+                'KORION is designed to circulate through active participation and real utility, with value recycling strengthened through platform-linked burn mechanics.',
+                'KORION은 발행 이후 정체되는 구조가 아니라, 참여와 사용을 통해 가치를 순환시키고, 플랫폼 수익과 연결된 소각을 통해 공급의 질을 관리하는 흐름을 지향합니다.',
+                'KORIONは積極的な参加と真の実用性を通じて循環するように設計されており、プラットフォームにリンクされたバーンのメカニズムによって価値のリサイクルが強化されます。',
+                'KORION旨在通过积极流通。'
+              )}
+            </p>
+          </motion.div>
+
+          <div className="tokenomics-flow">
+            {flowSteps.map((item, index) => (
+              <motion.div
+                key={item.step}
+                className="tokenomics-flow__item"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+              >
+                <div className="tokenomics-flow__step">{item.step}</div>
+                <h3>{t(item.titleEn, item.titleKo, item.titleJa, item.titleZh)}</h3>
+                <p>{t(item.descEn, item.descKo, item.descJa, item.descZh)}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="tokenomics-section tokenomics-section--alt">
+        <div className="tokenomics-page__container-01">
+          <div className="tokenomics-governance">
+            <motion.div
+              className="tokenomics-governance__panel"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="tokenomics-section__eyebrow">
+                <ShieldCheck size={15} />
+                {t('Governance & Sustainability', 'Governance & Sustainability', 'ガバナンスと持続可能性', '治理与可持续性')}
+              </span>
+              <h2>
+                {t(
+                  'Long-Term Confidence Depends More on Governance Than on Supply Alone',
+                  '핵심은 공급량보다 운영 신뢰입니다',
+                  '長期的な信頼性は単なる供給量ではなく、ガバナンスへの依存度が高い',
+                  '长期的信心更大。'
+                )}
+              </h2>
+              <p>
+                {t(
+                  'Because the token framework allows future change or additional issuance, transparency and operational discipline matter even more. Reserve policy, liquidity behavior, ecosystem expansion, and burn execution together shape market trust.',
+                  'KORION은 향후 변경 및 추가 발행 가능 구조를 포함하고 있기 때문에, 단순 숫자보다 운영 원칙과 투명성이 더욱 중요합니다. 리저브 관리, 유동성 운영, 생태계 확장, 소각 정책이 일관되게 작동해야 장기 신뢰가 형성됩니다.',
+                  'トークンフレームワークは将来の変更や追加の発行を許可しているため、透明性と運用の規律がより重要になります。準備金の方針、流動性の挙動、エコシステムの拡張とバーンの実行など、すべてが一緒になって市場の信頼を形成します。',
+                  '允许改动等。'
+                )}
+              </p>
+
+              <div className="tokenomics-governance__items">
+                {governanceItems.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={item.titleEn} className="tokenomics-governance__item">
+                      <div className="tokenomics-governance__icon">
+                        <Icon size={18} />
+                      </div>
+                      <div>
+                        <h3>{t(item.titleEn, item.titleKo, item.titleJa, item.titleZh)}</h3>
+                        <p>{t(item.descEn, item.descKo, item.descJa, item.descZh)}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="tokenomics-summary-card"
+              initial={{ opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="tokenomics-summary-card__badge">
+                <Boxes size={16} />
+                <span>{t('KORION Summary', 'KORION Summary', 'KORION サマリー', 'KORION 摘要')}</span>
+              </div>
+
+              <h3>
+                {t(
+                  'KORION is a TRON-based ecosystem asset built on a 10 billion supply framework, connecting mobile mining participation, platform utility, and a 10% monthly revenue burn model.',
+                  'KORION은 TRON 기반 100억 공급 구조 위에, 모바일 채굴 참여와 플랫폼 실사용, 그리고 월 수익 10% 소각을 연결한 순환형 생태계 자산입니다.',
+                  'KORIONはTRONベースの、100億の供給構造を基に構築されたエコシステム資産であり、モバイルマイニングの参加、プラットフォームの活用、そして毎月10％の収益バーンモデルを結びつけます。',
+                  'KORION概要总结等。'
+                )}
+              </h3>
+
+              <ul className="tokenomics-summary-card__list">
+                <li>
+                  {t(
+                    'TRON-based / 10,000,000,000 total supply / 6 decimals',
+                    'TRON 기반 / 총발행량 10,000,000,000 / 소수점 6자리',
+                    'TRONベース / 総供給量10,000,000,000 / 小数点6桁',
+                    '基于TRON。'
+                  )}
+                </li>
+                <li>
+                  {t(
+                    'Supply architecture centered on rewards, liquidity, reserves, and operations',
+                    '리워드·유동성·리저브·운영 구조 중심의 공급 설계',
+                    '報酬、流動性、準備金、運用に焦点を当てた供給アーキテクチャ',
+                    '以奖励流动为主要的框架。'
+                  )}
+                </li>
+                <li>
+                  {t(
+                    'Designed for real platform utility and ecosystem-level transactions',
+                    '플랫폼 내부 실제 사용 및 생태계 거래를 위한 설계',
+                    '真のプラットフォームのユーティリティとエコシステムレベルのトランザクションのために設計されています',
+                    '为真正的有用性。'
+                  )}
+                </li>
+                <li>
+                  {t(
+                    'Regular burn structure based on 10% of monthly platform revenue',
+                    '운영 플랫폼 월 수익의 10% 정기 소각 구조',
+                    '月間プラットフォーム収益の10％に基づく定期的なバーン構造',
+                    '固定收成百分之十。'
+                  )}
+                </li>
+                <li>
+                  {t(
+                    'Expandable framework allowing future modification and additional issuance',
+                    '향후 변경 및 추가 발행 가능성을 포함한 확장형 모델',
+                    '将来の変更と追加発行を許可する拡張可能なフレームワーク',
+                    '。'
+                  )}
+                </li>
+              </ul>
+
+              <div className="tokenomics-summary-card__footer">
+                <span>{t('Built for the KORION ecosystem', 'KORION 생태계를 위해 설계된 구조', 'KORIONエコシステムのために構築', '为生态系建造。')}</span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="tokenomics-section">
+        <div className="tokenomics-page__container-01">
+          <motion.div
+            className="tokenomics-section__heading"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65 }}
+          >
+            <span className="tokenomics-section__eyebrow">
+              <BarChart3 size={15} />
+              {t('Supply Metrics', 'Supply Metrics', 'サプライメトリックス（供給指標）', '供应量指标')}
+            </span>
+            <h2>
+              {t(
+                'The KORION Supply Model at a Glance',
+                '핵심 수치로 보는 KORION 공급 모델',
+                'KORION供給モデルへの一瞥',
+                'KORION供应模型参数'
+              )}
+            </h2>
+            <p>
+              {t(
+                'KORION is defined not only by issuance numbers but by how supply, revenue recycling, and operational design work together over time.',
+                'KORION의 공급 구조는 단순 발행 수치보다, 운영 구조와 수익 환류 메커니즘까지 포함한 입체적 모델입니다. 아래 지표는 KORION 토크노믹스의 핵심 기반을 빠르게 보여줍니다.',
+                'KORIONは発行数のみによって定義されるわけではなく、供給、収益のリサイクル設計、運用のバランスがいかに作用するかによって定義されます。',
+                '。'
+              )}
+            </p>
+          </motion.div>
+
+          <div className="tokenomics-supply-metrics">
+            {supplyModelStats.map((item, index) => (
+              <motion.div
+                key={item.labelEn}
+                className="tokenomics-supply-metric"
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.55, delay: index * 0.05 }}
+              >
+                <span className="tokenomics-supply-metric__label">
+                  {t(item.labelEn, item.labelKo, item.labelJa, item.labelZh)}
+                </span>
+                <strong className="tokenomics-supply-metric__value">{item.value}</strong>
+                <span className="tokenomics-supply-metric__sub">
+                  {t(item.subEn, item.subKo, item.subJa, item.subZh)}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="tokenomics-section tokenomics-section--alt">
+        <div className="tokenomics-page__container-01">
+          <div className="tokenomics-burn">
+            <motion.div
+              className="tokenomics-burn__left"
+              initial={{ opacity: 0, x: -18 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.65 }}
+            >
+              <span className="tokenomics-section__eyebrow">
+                <Flame size={15} />
+                {t('Burn Simulation', 'Burn Simulation', 'バーン（焼却）シミュレーション', '销毁模拟')}
+              </span>
+              <h2>
+                {t(
+                  'How the 10% Monthly Revenue Burn Can Build Long-Term Scarcity',
+                  '월 수익 10% 소각이 만드는 장기 희소성',
+                  '月間収益10％のバーンが長期的な希少性をどのように生み出すか',
+                  '如何产生稀缺性。'
+                )}
+              </h2>
+              <p>
+                {t(
+                  'KORION links 10% of monthly operating platform revenue to a recurring burn mechanism, allowing ecosystem growth to reinforce supply discipline over time.',
+                  'KORION은 운영 플랫폼에서 발생한 월 수익의 10%를 정기적으로 소각하는 구조를 기반으로 합니다. 이 구조는 플랫폼 규모가 커질수록 단순한 마케팅 장치가 아니라 실제 공급 감소 메커니즘으로 작동할 수 있습니다.',
+                  'KORIONは、月毎の運用プラットフォーム収益の10%を繰り返しのバーンの仕組みに結び付け、エコシステムの成長によって時間と共に供給の規律を強化させます。',
+                  '。'
+                )}
+              </p>
+
+              <div className="tokenomics-feature-points">
+                <div className="tokenomics-feature-point">
+                  <CheckCircle2 size={18} />
+                  <span>
+                    {t(
+                      'Platform growth and token scarcity become directly connected',
+                      '플랫폼 성장과 토큰 희소성이 연결되는 구조',
+                      'プラットフォームの成長とトークンの希少性が直接結びつきます',
+                      '平台和流通的稀缺挂钩。'
+                    )}
+                  </span>
+                </div>
+                <div className="tokenomics-feature-point">
+                  <CheckCircle2 size={18} />
+                  <span>
+                    {t(
+                      'A revenue-recycling model rather than a static issuance structure',
+                      '정적 공급 모델이 아닌 수익 환류형 구조',
+                      '収益リサイクル型のモデル（固定構造ではなく）',
+                      '有益的循环。'
+                    )}
+                  </span>
+                </div>
+                <div className="tokenomics-feature-point">
+                  <CheckCircle2 size={18} />
+                  <span>
+                    {t(
+                      'Deflation-oriented design that can strengthen long-term confidence',
+                      '장기 생태계 신뢰를 강화하는 디플레이션 설계',
+                      'デフレ志向のデザインが長期的な信頼を強化',
+                      '。'
+                    )}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="tokenomics-burn__tableWrap"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.65 }}
+            >
+              <div className="tokenomics-burn__table">
+                <div className="tokenomics-burn__head">
+                  <span>{t('Stage', '단계', '段階', '阶段')}</span>
+                  <span>{t('Monthly Revenue', '월 수익 예시', '毎月の収益', '每月收入')}</span>
+                  <span>{t('Monthly Burn', '월 소각 예시', '毎月のバーン（焼却）', '每月销毁')}</span>
+                </div>
+
+                {burnSimulationRows.map((row) => (
+                  <div key={row.scenarioEn} className="tokenomics-burn__row">
+                    <span>{t(row.scenarioEn, row.scenarioKo, row.scenarioJa, row.scenarioZh)}</span>
+                    <span>{row.revenue}</span>
+                    <span>{row.burn}</span>
+                    <p>{t(row.effectEn, row.effectKo, row.effectJa, row.effectZh)}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="tokenomics-section">
+        <div className="tokenomics-page__container-01">
+          <motion.div
+            className="tokenomics-section__heading"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.65 }}
+          >
+            <span className="tokenomics-section__eyebrow">
+              <Database size={15} />
+              {t('Wallet Architecture', 'Wallet Architecture', 'ウォレットアーキテクチャ', '钱包架构')}
+            </span>
+            <h2>
+              {t(
+                'The Wallet Architecture Behind KORION Supply and Utility',
+                'KORION 공급과 활용을 연결하는 지갑 아키텍처',
+                'KORION供給とユーティリティの背後にあるウォレットの構成',
+                '代币模型与体系。'
+              )}
+            </h2>
+            <p>
+              {t(
+                'KORION tokenomics should not exist only on paper. Reward pools, liquidity, hot wallet operations, cold storage, platform utility, and burn logic must function as a connected architecture.',
+                'KORION의 토크노믹스는 단순 수치가 아니라 실제 운영 구조와 연결되어야 합니다. 리워드 풀, 유동성, 핫월렛, 콜드월렛, 플랫폼 유틸리티, 소각 엔진은 각각 독립된 역할을 가지면서도 하나의 순환 체계 안에서 맞물립니다.',
+                'トークノミクスは机上の空論にとどまらず、運用される必要があります。報酬プール、流動性、ホットウォレット、コールドストレージ、プラットフォームのユーティリティ、バーンのロジックは、接続されたアーキテクチャとして機能しなければなりません。',
+                '在运营之中进行活动及管理。'
+              )}
+            </p>
+          </motion.div>
+
+          <div className="tokenomics-architecture">
+            <div className="tokenomics-architecture__center">
+              <div className="tokenomics-architecture__core">
+                <Coins size={28} />
+                <strong>KORION</strong>
+                <span>{t('Supply & Utility Core', 'Supply & Utility Core', '供給・ユーティリティ・コア', '核心效用和供应核。')}</span>
+              </div>
+            </div>
+
+            <div className="tokenomics-architecture__grid">
+              {walletArchitecture.map((item, index) => (
+                <motion.div
+                  key={item.key}
+                  className={`tokenomics-architecture__node tokenomics-architecture__node--${item.key}`}
+                  initial={{ opacity: 0, scale: 0.94 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.45, delay: index * 0.04 }}
+                >
+                  <h3>{t(item.titleEn, item.titleKo, item.titleJa, item.titleZh)}</h3>
+                  <p>{t(item.descEn, item.descKo, item.descJa, item.descZh)}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

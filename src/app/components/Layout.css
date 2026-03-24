@@ -1,0 +1,31 @@
+.layout-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #050816;
+}
+
+.layout-main {
+  flex: 1 1 auto;
+}
+
+
+.developers-layout {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(91, 108, 255, 0.15), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(132, 92, 255, 0.14), transparent 30%),
+    linear-gradient(180deg, #08111f 0%, #081427 52%, #09101a 100%);
+  color: #ffffff;
+}
+
+.developers-doc-page {
+  min-height: calc(100vh - 76px);
+}
+
+
+.developers-doc-page__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}

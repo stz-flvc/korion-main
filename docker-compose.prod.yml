@@ -1,0 +1,11 @@
+services:
+  korion-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_SITE_URL: ${VITE_SITE_URL:-https://www.korion.network}
+    container_name: korion-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"

@@ -1,0 +1,349 @@
+PROJECT: Korion Official Website — Infrastructure-Level Web3 Product UI Design
+
+OBJECTIVE:
+Design a modern, premium, infrastructure-grade website UI for Korion, a revolutionary offline crypto payment system that enables secure smartphone-to-smartphone digital asset transactions without internet connectivity.
+
+The design quality must match or exceed the visual standards of arbitrum.io, layerzero.network, and starknet.io.
+
+The design must communicate trust, advanced infrastructure, security, and global financial scale.
+
+---
+
+GLOBAL DESIGN STYLE:
+
+Theme:
+
+* Dark, futuristic, infrastructure-grade interface
+* Background: deep black (#050505 or similar)
+* Accent colors: electric blue, deep purple, subtle gradient glow
+* Clean, minimal, modern
+
+Visual tone:
+
+* premium
+* futuristic
+* secure
+* scalable infrastructure
+
+Use visual techniques such as:
+
+* glassmorphism
+* soft glow effects
+* subtle gradients
+* modern spacing
+* clean typography hierarchy
+
+Avoid:
+
+* cartoonish elements
+* overly colorful designs
+* cluttered layouts
+
+---
+
+TYPOGRAPHY SYSTEM:
+
+Primary font:
+
+* Inter, Satoshi, or Space Grotesk
+
+Font hierarchy:
+
+Hero headline:
+
+* 64–80px
+* bold
+* strong presence
+
+Section headers:
+
+* 36–48px
+* semi-bold
+
+Body text:
+
+* 16–18px
+* regular
+* high readability
+
+Use proper spacing and hierarchy.
+
+---
+
+GRID AND LAYOUT SYSTEM:
+
+Use 12-column grid layout.
+
+Max width:
+
+* 1200–1400px container
+
+Spacing system:
+
+* 8px spacing scale
+* consistent vertical rhythm
+
+Sections must have strong spacing and visual separation.
+
+---
+
+REQUIRED WEBSITE SECTIONS TO DESIGN:
+
+1. NAVBAR
+
+Sticky navigation bar.
+
+Left:
+
+* Korion logo
+
+Right:
+
+* Navigation links:
+
+  * Home
+  * Technology
+  * How it Works
+  * Use Cases
+  * Team
+  * Download
+
+Include:
+
+* subtle blur background
+* modern minimal design
+
+---
+
+2. HERO SECTION
+
+Full viewport height hero.
+
+Left side:
+Headline:
+"Offline Crypto Payments. No Network Required."
+
+Subtext:
+"A self-operating blockchain infrastructure enabling secure peer-to-peer smartphone transactions without connectivity."
+
+CTA buttons:
+
+* Download on App Store
+* Get it on Google Play
+
+Right side:
+Visual element placeholder:
+
+* 3D phone mockup OR
+* blockchain network visualization OR
+* abstract glowing network nodes
+
+Background:
+
+* subtle gradient glow
+* futuristic infrastructure aesthetic
+
+---
+
+3. TRUST / CREDIBILITY SECTION
+
+Horizontal strip showing:
+
+* Patent-pending architecture
+* Quantum-resistant security
+* Secure hardware-based verification
+* No network dependency
+
+Use minimal, clean visual cards.
+
+---
+
+4. PROBLEM SECTION
+
+Explain limitations of traditional payments.
+
+Layout:
+3–4 feature cards
+
+Examples:
+
+* Requires internet
+* Requires POS devices
+* Network outages stop payments
+* Infrastructure heavy systems
+
+Use modern card design with icon placeholders.
+
+---
+
+5. SOLUTION SECTION
+
+Explain Korion solution.
+
+Feature cards:
+
+* Offline payment capability
+* Hardware-level security
+* Peer-to-peer verification
+* Self-operating blockchain
+
+Include visual illustration placeholder.
+
+---
+
+6. HOW IT WORKS SECTION
+
+Horizontal or vertical step flow.
+
+4 steps:
+
+Lock funds securely
+
+Bring smartphones close together
+
+Instant offline transaction
+
+Automatic sync later
+
+Each step displayed in modern cards with visual indicators.
+
+---
+
+7. MOBILE APP SECTION
+
+Display mobile app interface.
+
+Include:
+
+Phone mockup frame
+
+Buttons:
+
+* App Store button
+* Google Play button
+
+Text:
+"Download Korion and start offline payments"
+
+This section must feel product-focused.
+
+---
+
+8. TECHNOLOGY SECTION
+
+Explain Korion core technologies.
+
+Cards for:
+
+Trusted Execution Environment (TEE)
+Hash-chain integrity
+Quantum resistance
+Mini blockchain architecture
+
+Modern infrastructure visual design.
+
+---
+
+9. USE CASES SECTION
+
+Grid layout showing real-world use cases:
+
+Disaster zones
+Military environments
+Remote regions
+Developing economies
+Offline environments
+
+Each with icon placeholder.
+
+---
+
+10. TEAM SECTION
+
+Grid layout.
+
+Each card includes:
+
+Photo placeholder
+Name
+Role
+Social icon placeholders
+
+Clean, professional layout.
+
+---
+
+11. SOCIAL / COMMUNITY SECTION
+
+Icons for:
+
+Twitter / X
+Telegram
+Discord
+GitHub
+
+Minimal modern style.
+
+---
+
+12. FOOTER
+
+Include:
+
+Logo
+Navigation links
+Social links
+Legal placeholder
+
+Clean infrastructure-grade footer.
+
+---
+
+COMPONENT REQUIREMENTS:
+
+Create reusable components:
+
+Navbar
+Hero
+Feature cards
+Buttons
+Team cards
+Footer
+
+---
+
+DESIGN REQUIREMENTS:
+
+Fully responsive layouts for:
+
+Desktop
+Tablet
+Mobile
+
+Create separate frames for each breakpoint.
+
+---
+
+VISUAL QUALITY GOAL:
+
+The final design must look like:
+
+* a global financial infrastructure platform
+* an advanced blockchain technology company
+* a premium, modern Web3 protocol
+
+NOT a basic startup landing page.
+
+---
+
+FINAL OUTPUT:
+
+Create complete website UI design in Figma including:
+
+Desktop version
+Tablet version
+Mobile version
+
+All sections listed above.
+
+Use proper spacing, hierarchy, and modern infrastructure-level design principles.

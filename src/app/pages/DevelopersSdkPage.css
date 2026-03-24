@@ -1,0 +1,705 @@
+.developers-sdk-page {
+    min-height: 100vh;
+    background: #f4f5f7;
+    color: #1f2f44;
+}
+
+.developers-sdk-page__container {
+    width: min(1320px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.developers-sdk-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: linear-gradient(180deg, #0a1020 0%, #0c1224 100%);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.developers-sdk-topbar__inner {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.developers-sdk-topbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.developers-sdk-topbar__brand-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #7c92ff 0%, #7c5dff 100%);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+.developers-sdk-topbar__nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.developers-sdk-topbar__nav a {
+    color: rgba(230,236,255,0.82);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.developers-sdk-topbar__nav a.is-active,
+.developers-sdk-topbar__nav a:hover {
+    color: #fff;
+}
+
+.developers-sdk-hero {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(124,146,255,0.18), transparent 24%),
+        radial-gradient(circle at 80% 10%, rgba(125,92,255,0.18), transparent 24%),
+        linear-gradient(180deg, #0b1325 0%, #101b34 100%);
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.developers-sdk-hero .developers-sdk-page__container {
+    padding: 56px 0 48px;
+}
+
+.developers-sdk-hero__crumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.developers-sdk-hero__crumbs a,
+.developers-sdk-hero__crumbs span {
+    color: #d5e0ff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.developers-sdk-hero h1 {
+    margin: 0 0 14px;
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+    font-weight: 950;
+}
+
+.developers-sdk-hero p {
+    margin: 0;
+    max-width: 840px;
+    color: rgba(234,240,255,0.82);
+    line-height: 1.85;
+}
+
+.developers-sdk-body__grid {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+}
+
+.developers-sdk-sidebar {
+    position: sticky;
+    top: 96px;
+    align-self: start;
+}
+
+.developers-sdk-sidebar__box {
+    background: #fff;
+    border: 1px solid #e3e7ee;
+    border-radius: 16px;
+    padding: 18px 16px;
+}
+
+.developers-sdk-sidebar__title {
+    display: block;
+    margin-bottom: 12px;
+    color: #7c8797;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.developers-sdk-sidebar__box a {
+    display: block;
+    text-decoration: none;
+    color: #46566a;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        font-weight 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.developers-sdk-sidebar__box a:hover,
+.developers-sdk-sidebar__box a.is-current {
+    background: #ffffff;
+    color: #d14a67;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(209, 74, 103, 0.08);
+}
+
+.developers-sdk-main {
+    background: #fff;
+    border: 1px solid #e3e7ee;
+    border-radius: 18px;
+    padding: 32px;
+}
+
+.developers-sdk-section {
+    scroll-margin-top: 120px;
+}
+
+.developers-sdk-section + .developers-sdk-section {
+    margin-top: 40px;
+}
+
+.developers-sdk-section h2 {
+    margin: 0 0 12px;
+    font-size: 1.85rem;
+    color: #1f3048;
+    letter-spacing: -0.03em;
+}
+
+.developers-sdk-section h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    color: #1f3048;
+}
+
+.developers-sdk-section p {
+    margin: 0;
+    color: #455569;
+    line-height: 1.85;
+}
+
+.developers-sdk-divider {
+    height: 1px;
+    background: #e8ecf2;
+    margin: 0 0 18px;
+}
+
+.developers-sdk-modules {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.developers-sdk-module {
+    border: 1px solid #e7ebf1;
+    border-radius: 18px;
+    padding: 22px 20px;
+    background: #fafbfd;
+}
+
+.developers-sdk-module__icon,
+.developers-sdk-roadmap__icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, rgba(124,146,255,0.14), rgba(124,93,255,0.12));
+    color: #5166d2;
+}
+
+.developers-sdk-module__packages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.developers-sdk-module__packages code {
+    background: #eef3ff;
+    color: #334a83;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 0.82rem;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+.developers-sdk-examples {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.developers-sdk-example {
+    border: 1px solid #e7ebf1;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0f172a;
+}
+
+.developers-sdk-example__head {
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.developers-sdk-example__head-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #dbe7ff;
+    font-weight: 800;
+}
+
+.developers-sdk-example pre {
+    margin: 0;
+    padding: 18px;
+    overflow-x: auto;
+    color: #dbe7ff;
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.developers-sdk-roadmap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.developers-sdk-roadmap__item {
+    display: flex;
+    gap: 14px;
+    border: 1px solid #e7ebf1;
+    border-radius: 16px;
+    padding: 18px 16px;
+    background: #fafbfd;
+}
+
+.developers-sdk-roadmap__item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #23344b;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .developers-sdk-page {
+        overflow-x: hidden;
+    }
+
+    .developers-sdk-page__container {
+        width: calc(100% - 28px);
+    }
+
+    .developers-sdk-topbar__inner {
+        min-height: auto;
+        padding: 12px 0;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .developers-sdk-topbar__brand {
+        flex: 0 0 auto;
+        min-width: 0;
+    }
+
+    .developers-sdk-topbar__nav {
+        order: 3;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .developers-sdk-topbar__nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .developers-sdk-topbar__nav a {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 8px 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .developers-sdk-hero .developers-sdk-page__container {
+        padding: 34px 0 34px;
+    }
+
+    .developers-sdk-hero__crumbs {
+        flex-wrap: wrap;
+        margin-bottom: 14px;
+        font-size: 0.84rem;
+    }
+
+    .developers-sdk-hero h1 {
+        font-size: clamp(2rem, 6vw, 2.8rem);
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .developers-sdk-hero p {
+        max-width: 100%;
+        font-size: 0.96rem;
+        line-height: 1.72;
+    }
+
+    .developers-sdk-body__grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding-top: 18px;
+        padding-bottom: 36px;
+    }
+
+    .developers-sdk-sidebar {
+        position: static;
+        top: auto;
+    }
+
+    .developers-sdk-sidebar__box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 16px;
+        border-radius: 16px;
+        background-color: #cbcfd8;
+    }
+
+    .developers-sdk-sidebar__title {
+        grid-column: 1 / -1;
+        margin-bottom: 4px;
+    }
+
+    .developers-sdk-sidebar__box a {
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        line-height: 1.35;
+    }
+
+    .developers-sdk-main {
+        padding: 24px 20px 18px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        border-radius: 16px;
+    }
+
+    .developers-sdk-section + .developers-sdk-section {
+        margin-top: 30px;
+    }
+
+    .developers-sdk-section h2 {
+        font-size: 1.5rem;
+        line-height: 1.16;
+        margin-bottom: 10px;
+    }
+
+    .developers-sdk-section h3 {
+        font-size: 1rem;
+        line-height: 1.34;
+        margin-bottom: 8px;
+    }
+
+    .developers-sdk-section p {
+        font-size: 0.94rem;
+        line-height: 1.72;
+    }
+
+    .developers-sdk-divider {
+        margin-bottom: 14px;
+    }
+
+    .developers-sdk-modules {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .developers-sdk-module {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    .developers-sdk-module__icon,
+    .developers-sdk-roadmap__icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+
+    .developers-sdk-module__packages {
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    .developers-sdk-module__packages code {
+        padding: 7px 9px;
+        font-size: 0.76rem;
+        border-radius: 8px;
+    }
+
+    .developers-sdk-examples {
+        gap: 12px;
+    }
+
+    .developers-sdk-example {
+        border-radius: 16px;
+    }
+
+    .developers-sdk-example__head {
+        padding: 12px 14px;
+    }
+
+    .developers-sdk-example pre {
+        padding: 16px;
+        font-size: 0.67rem !important;
+        line-height: 1.66;
+    }
+
+    .developers-sdk-roadmap {
+        gap: 12px;
+    }
+
+    .developers-sdk-roadmap__item {
+        padding: 16px 14px;
+        border-radius: 14px;
+    }
+
+    .developers-sdk-roadmap__item strong {
+        font-size: 0.94rem;
+    }
+    }
+
+    /* mobile */
+    @media (max-width: 768px) {
+    .developers-sdk-page__container {
+        width: calc(100% - 20px);
+    }
+
+    .developers-sdk-topbar__inner {
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .developers-sdk-topbar__brand {
+        gap: 8px;
+        font-size: 0.94rem;
+    }
+
+    .developers-sdk-topbar__brand-badge {
+        width: 26px;
+        height: 26px;
+        border-radius: 7px;
+        font-size: 0.82rem;
+    }
+
+    .developers-sdk-topbar__nav a {
+        padding: 8px 10px;
+        font-size: 0.82rem;
+    }
+
+    .developers-sdk-hero .developers-sdk-page__container {
+        padding: 26px 0 28px;
+    }
+
+    .developers-sdk-hero__crumbs {
+        margin-bottom: 12px;
+        font-size: 0.78rem;
+        gap: 6px;
+    }
+
+    .developers-sdk-hero h1 {
+        font-size: clamp(1.7rem, 8.4vw, 2.2rem);
+        line-height: 1.12;
+        margin-bottom: 10px;
+    }
+
+    .developers-sdk-hero p {
+        font-size: 0.9rem;
+        line-height: 1.66;
+    }
+
+    .developers-sdk-body__grid {
+        gap: 14px;
+        padding-top: 14px;
+        padding-bottom: 28px;
+    }
+
+    .developers-sdk-sidebar__box {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .developers-sdk-sidebar__title {
+        font-size: 0.76rem;
+        margin-bottom: 2px;
+    }
+
+    .developers-sdk-sidebar__box a {
+        width: 100%;
+        display: block;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 0.86rem;
+    }
+
+    .developers-sdk-main {
+        padding: 16px 14px 12px;
+        border-radius: 14px;
+    }
+
+    .developers-sdk-section + .developers-sdk-section {
+        margin-top: 24px;
+    }
+
+    .developers-sdk-section h2 {
+        font-size: 1.18rem;
+        margin-bottom: 8px;
+    }
+
+    .developers-sdk-section h3 {
+        font-size: 0.96rem;
+        margin-bottom: 8px;
+    }
+
+    .developers-sdk-section p {
+        font-size: 0.88rem;
+        line-height: 1.64;
+    }
+
+    .developers-sdk-modules {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .developers-sdk-module {
+        padding: 14px 12px;
+        border-radius: 14px;
+    }
+
+    .developers-sdk-module__icon,
+    .developers-sdk-roadmap__icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .developers-sdk-module__packages code {
+        font-size: 0.72rem;
+        padding: 7px 8px;
+    }
+
+    .developers-sdk-example {
+        border-radius: 14px;
+    }
+
+    .developers-sdk-example__head {
+        padding: 11px 12px;
+    }
+
+    .developers-sdk-example pre {
+        padding: 14px;
+        font-size: 0.78rem;
+        line-height: 1.58;
+    }
+
+    .developers-sdk-roadmap__item {
+        gap: 10px;
+        padding: 14px 12px;
+        border-radius: 12px;
+    }
+
+    .developers-sdk-roadmap__item strong {
+        font-size: 0.88rem;
+    }
+    }
+
+    /* very small */
+    @media (max-width: 420px) {
+    .developers-sdk-page__container {
+        width: calc(100% - 16px);
+    }
+
+    .developers-sdk-topbar__brand {
+        font-size: 0.9rem;
+    }
+
+    .developers-sdk-hero .developers-sdk-page__container {
+        padding: 22px 0 24px;
+    }
+
+    .developers-sdk-hero h1 {
+        font-size: 1.52rem;
+    }
+
+    .developers-sdk-hero p,
+    .developers-sdk-section p {
+        font-size: 0.82rem;
+        line-height: 1.56;
+    }
+
+    .developers-sdk-sidebar__box,
+    .developers-sdk-main,
+    .developers-sdk-module,
+    .developers-sdk-example,
+    .developers-sdk-roadmap__item {
+        border-radius: 12px;
+    }
+
+    .developers-sdk-sidebar__box {
+        padding: 12px;
+    }
+
+    .developers-sdk-main {
+        padding: 14px 12px 10px;
+    }
+
+    .developers-sdk-module,
+    .developers-sdk-roadmap__item {
+        padding: 12px;
+    }
+
+    .developers-sdk-section h2 {
+        font-size: 1.06rem;
+    }
+
+    .developers-sdk-section h3 {
+        font-size: 0.9rem;
+    }
+
+    .developers-sdk-example pre {
+        padding: 12px;
+        font-size: 0.74rem;
+    }
+    }

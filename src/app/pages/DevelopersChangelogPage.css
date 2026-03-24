@@ -1,0 +1,727 @@
+.developers-changelog-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, rgba(124, 146, 255, 0.05), transparent 28%),
+        #f4f5f7;
+    color: #1f2f44;
+    }
+
+    .developers-changelog-page__container {
+    width: min(1320px, calc(100% - 40px));
+    margin: 0 auto;
+    }
+
+    /* topbar */
+    .developers-changelog-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: linear-gradient(180deg, #0a1020 0%, #0c1224 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    }
+
+    .developers-changelog-topbar__inner {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    }
+
+    .developers-changelog-topbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    }
+
+    .developers-changelog-topbar__brand-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #7c92ff 0%, #7c5dff 100%);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 900;
+    box-shadow: 0 10px 24px rgba(92, 84, 204, 0.28);
+    }
+
+    .developers-changelog-topbar__nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    }
+
+    .developers-changelog-topbar__nav a {
+    color: rgba(230, 236, 255, 0.82);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    .developers-changelog-topbar__nav a.is-active,
+    .developers-changelog-topbar__nav a:hover {
+    color: #fff;
+    }
+
+    /* hero */
+    .developers-changelog-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(124, 146, 255, 0.18), transparent 24%),
+        radial-gradient(circle at 80% 10%, rgba(125, 92, 255, 0.18), transparent 24%),
+        linear-gradient(180deg, #0b1325 0%, #101b34 100%);
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .developers-changelog-hero .developers-changelog-page__container {
+    padding: 56px 0 48px;
+    }
+
+    .developers-changelog-hero__crumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    }
+
+    .developers-changelog-hero__crumbs a,
+    .developers-changelog-hero__crumbs span {
+    color: #d5e0ff;
+    text-decoration: none;
+    font-weight: 700;
+    }
+
+    .developers-changelog-hero__crumbs a:hover {
+    color: #ffffff;
+    }
+
+    .developers-changelog-hero h1 {
+    margin: 0 0 14px;
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+    font-weight: 950;
+    }
+
+    .developers-changelog-hero p {
+    margin: 0;
+    max-width: 840px;
+    color: rgba(234, 240, 255, 0.82);
+    line-height: 1.85;
+    }
+
+    /* body */
+    .developers-changelog-body__grid {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+    }
+
+    .developers-changelog-sidebar {
+    position: sticky;
+    top: 96px;
+    align-self: start;
+    }
+
+    .developers-changelog-sidebar__box {
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid #e3e7ee;
+    border-radius: 18px;
+    padding: 18px 16px;
+    box-shadow: 0 14px 32px rgba(31, 47, 68, 0.06);
+    backdrop-filter: blur(10px);
+    }
+
+    .developers-changelog-sidebar__title {
+    display: block;
+    margin-bottom: 12px;
+    color: #7c8797;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    }
+
+    .developers-changelog-sidebar__box a {
+    display: block;
+    text-decoration: none;
+    color: #46566a;
+    padding: 10px 12px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+    }
+
+    .developers-changelog-sidebar__box a:hover {
+    background: #eef3ff;
+    color: #d14a67;
+    transform: translateX(2px);
+    }
+
+    .developers-changelog-main {
+    min-width: 0;
+    }
+
+    /* summary */
+    .developers-changelog-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+    }
+
+    .developers-changelog-summary__card {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #e3e7ee;
+    border-radius: 20px;
+    padding: 20px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    box-shadow: 0 14px 32px rgba(31, 47, 68, 0.05);
+    }
+
+    .developers-changelog-summary__icon,
+    .developers-changelog-entry__icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(124, 146, 255, 0.14), rgba(124, 93, 255, 0.12));
+    color: #5166d2;
+    flex: 0 0 auto;
+    }
+
+    .developers-changelog-summary__card span {
+    display: block;
+    margin-bottom: 6px;
+    color: #7c8797;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    }
+
+    .developers-changelog-summary__card strong {
+    color: #23344b;
+    line-height: 1.4;
+    }
+
+    /* list */
+    .developers-changelog-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    }
+
+    .developers-changelog-entry {
+    scroll-margin-top: 110px;
+    }
+
+    .developers-changelog-entry__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    }
+
+    .developers-changelog-entry__version {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #18243a;
+    color: #fff;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    box-shadow: 0 10px 24px rgba(24, 36, 58, 0.12);
+    }
+
+    .developers-changelog-entry__date {
+    color: #718095;
+    font-weight: 700;
+    }
+
+    .developers-changelog-entry__card {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #e3e7ee;
+    border-radius: 20px;
+    padding: 22px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    box-shadow: 0 16px 36px rgba(31, 47, 68, 0.06);
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+    }
+
+    .developers-changelog-entry__card:hover {
+    transform: translateY(-2px);
+    border-color: #d7def2;
+    box-shadow: 0 20px 44px rgba(31, 47, 68, 0.08);
+    }
+
+    .developers-changelog-entry__content {
+    min-width: 0;
+    }
+
+    .developers-changelog-entry__content h2 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: #1f3048;
+    letter-spacing: -0.02em;
+    }
+
+    .developers-changelog-entry__content ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #455569;
+    line-height: 1.85;
+    }
+
+    .developers-changelog-entry__content li + li {
+    margin-top: 4px;
+    }
+
+
+
+    .developers-changelog-sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #46566a;
+    padding: 10px 12px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .developers-changelog-sidebar__link:hover {
+    background: #ffffff;
+    color: #d14a67;
+    font-weight: 800;
+    border-color: rgba(209, 74, 103, 0.12);
+    box-shadow: 0 8px 20px rgba(209, 74, 103, 0.08);
+    }
+
+    .developers-changelog-sidebar__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #c8d2e2;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+    transition:
+        background 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    flex: 0 0 auto;
+    }
+
+    .developers-changelog-sidebar__link.is-active {
+    background: #ffffff;
+    color: #d14a67;
+    font-weight: 800;
+    border-color: rgba(209, 74, 103, 0.18);
+    box-shadow: 0 8px 20px rgba(209, 74, 103, 0.1);
+    }
+
+    .developers-changelog-sidebar__link.is-active .developers-changelog-sidebar__dot {
+    background: #ffffff;
+    color: #d14a67;
+    font-weight: 800;
+    border-color: rgba(209, 74, 103, 0.18);
+    box-shadow: 0 8px 20px rgba(209, 74, 103, 0.1);
+    }
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .developers-changelog-page {
+        overflow-x: hidden;
+    }
+
+    .developers-changelog-page__container {
+        width: calc(100% - 28px);
+    }
+
+    .developers-changelog-topbar__inner {
+        min-height: auto;
+        padding: 12px 0;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .developers-changelog-topbar__brand {
+        flex: 0 0 auto;
+        min-width: 0;
+    }
+
+    .developers-changelog-topbar__nav {
+        order: 3;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .developers-changelog-topbar__nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .developers-changelog-topbar__nav a {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 8px 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .developers-changelog-hero .developers-changelog-page__container {
+        padding: 34px 0 34px;
+    }
+
+    .developers-changelog-hero__crumbs {
+        margin-bottom: 14px;
+        font-size: 0.84rem;
+        gap: 6px;
+    }
+
+    .developers-changelog-hero h1 {
+        font-size: clamp(2rem, 6vw, 2.9rem);
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .developers-changelog-hero p {
+        max-width: 100%;
+        font-size: 0.96rem;
+        line-height: 1.72;
+    }
+
+    .developers-changelog-body__grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding-top: 18px;
+        padding-bottom: 36px;
+    }
+
+    .developers-changelog-sidebar {
+        position: static;
+        top: auto;
+    }
+
+    .developers-changelog-sidebar__box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 16px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        background-color: #cbcfd8;
+    }
+
+    .developers-changelog-sidebar__title {
+        grid-column: 1 / -1;
+        margin-bottom: 4px;
+    }
+
+    .developers-changelog-sidebar__link,
+    .developers-changelog-sidebar__box a {
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 0.88rem;
+        line-height: 1.35;
+    }
+
+    .developers-changelog-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .developers-changelog-summary__card {
+        padding: 18px 16px;
+        border-radius: 18px;
+    }
+
+    .developers-changelog-summary__icon,
+    .developers-changelog-entry__icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+    }
+
+    .developers-changelog-summary__card span {
+        font-size: 0.76rem;
+    }
+
+    .developers-changelog-summary__card strong {
+        font-size: 0.92rem;
+        line-height: 1.45;
+    }
+
+    .developers-changelog-list {
+        gap: 14px;
+    }
+
+    .developers-changelog-entry__meta {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .developers-changelog-entry__version {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+    }
+
+    .developers-changelog-entry__date {
+        font-size: 0.86rem;
+    }
+
+    .developers-changelog-entry__card {
+        padding: 18px 16px;
+        border-radius: 18px;
+        gap: 14px;
+    }
+
+    .developers-changelog-entry__content h2 {
+        font-size: 1.08rem;
+        line-height: 1.34;
+        margin-bottom: 8px;
+    }
+
+    .developers-changelog-entry__content ul {
+        font-size: 0.92rem;
+        line-height: 1.72;
+    }
+    }
+
+    /* mobile */
+    @media (max-width: 768px) {
+    .developers-changelog-page__container {
+        width: calc(100% - 20px);
+    }
+
+    .developers-changelog-topbar__inner {
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .developers-changelog-topbar__brand {
+        gap: 8px;
+        font-size: 0.94rem;
+    }
+
+    .developers-changelog-topbar__brand-badge {
+        width: 26px;
+        height: 26px;
+        border-radius: 7px;
+        font-size: 0.82rem;
+    }
+
+    .developers-changelog-topbar__nav a {
+        padding: 8px 10px;
+        font-size: 0.82rem;
+    }
+
+    .developers-changelog-hero .developers-changelog-page__container {
+        padding: 26px 0 28px;
+    }
+
+    .developers-changelog-hero__crumbs {
+        margin-bottom: 12px;
+        font-size: 0.78rem;
+    }
+
+    .developers-changelog-hero h1 {
+        font-size: clamp(1.7rem, 8.4vw, 2.2rem);
+        line-height: 1.12;
+        margin-bottom: 10px;
+    }
+
+    .developers-changelog-hero p {
+        font-size: 0.9rem;
+        line-height: 1.66;
+    }
+
+    .developers-changelog-body__grid {
+        gap: 14px;
+        padding-top: 14px;
+        padding-bottom: 28px;
+    }
+
+    .developers-changelog-sidebar__box {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .developers-changelog-sidebar__title {
+        font-size: 0.76rem;
+        margin-bottom: 2px;
+    }
+
+    .developers-changelog-sidebar__link,
+    .developers-changelog-sidebar__box a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 0.86rem;
+        white-space: normal;
+    }
+
+    .developers-changelog-sidebar__dot {
+        width: 7px;
+        height: 7px;
+        flex: 0 0 auto;
+    }
+
+    .developers-changelog-summary {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .developers-changelog-summary__card {
+        padding: 14px 12px;
+        border-radius: 14px;
+        gap: 12px;
+    }
+
+    .developers-changelog-summary__icon,
+    .developers-changelog-entry__icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+
+    .developers-changelog-summary__card span {
+        font-size: 0.72rem;
+        margin-bottom: 4px;
+    }
+
+    .developers-changelog-summary__card strong {
+        font-size: 0.86rem;
+    }
+
+    .developers-changelog-list {
+        gap: 12px;
+    }
+
+    .developers-changelog-entry__meta {
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .developers-changelog-entry__version {
+        font-size: 0.74rem;
+        padding: 5px 9px;
+    }
+
+    .developers-changelog-entry__date {
+        font-size: 0.8rem;
+    }
+
+    .developers-changelog-entry__card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 14px;
+        border-radius: 16px;
+    }
+
+    .developers-changelog-entry__content h2 {
+        font-size: 0.96rem;
+        margin-bottom: 8px;
+    }
+
+    .developers-changelog-entry__content ul {
+        padding-left: 16px;
+        font-size: 0.86rem;
+        line-height: 1.66;
+    }
+    }
+
+    /* very small */
+    @media (max-width: 420px) {
+    .developers-changelog-page__container {
+        width: calc(100% - 16px);
+    }
+
+    .developers-changelog-topbar__brand {
+        font-size: 0.9rem;
+    }
+
+    .developers-changelog-hero .developers-changelog-page__container {
+        padding: 22px 0 24px;
+    }
+
+    .developers-changelog-hero h1 {
+        font-size: 1.52rem;
+    }
+
+    .developers-changelog-hero p,
+    .developers-changelog-entry__content ul {
+        font-size: 0.82rem;
+        line-height: 1.56;
+    }
+
+    .developers-changelog-sidebar__box,
+    .developers-changelog-summary__card,
+    .developers-changelog-entry__card {
+        border-radius: 12px;
+    }
+
+    .developers-changelog-sidebar__box {
+        padding: 12px;
+    }
+
+    .developers-changelog-summary__card,
+    .developers-changelog-entry__card {
+        padding: 12px;
+    }
+
+    .developers-changelog-entry__content h2 {
+        font-size: 0.9rem;
+    }
+
+    .developers-changelog-entry__version {
+        font-size: 0.7rem;
+    }
+    }
