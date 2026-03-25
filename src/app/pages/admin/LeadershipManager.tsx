@@ -68,14 +68,24 @@ export function LeadershipManager() {
       id: `l-${Date.now()}`,
       name: '',
       nameKo: '',
+      nameJa: '',
+      nameZh: '',
       role: '',
       roleKo: '',
+      roleJa: '',
+      roleZh: '',
       summary: '',
       summaryKo: '',
+      summaryJa: '',
+      summaryZh: '',
       bio: '',
       bioKo: '',
+      bioJa: '',
+      bioZh: '',
       highlights: [],
       highlightsKo: [],
+      highlightsJa: [],
+      highlightsZh: [],
       image: null,
       socialLinks: {},
       position: members.length,
@@ -146,6 +156,24 @@ export function LeadershipManager() {
                     />
                   </div>
                 </div>
+                <div className="admin-form__flex-row">
+                  <div className="admin-form__field">
+                    <label>Name (Japanese)</label>
+                    <input 
+                      type="text" 
+                      value={editingMember.nameJa || ''} 
+                      onChange={e => setEditingMember({...editingMember, nameJa: e.target.value})}
+                    />
+                  </div>
+                  <div className="admin-form__field">
+                    <label>Name (Chinese)</label>
+                    <input 
+                      type="text" 
+                      value={editingMember.nameZh || ''} 
+                      onChange={e => setEditingMember({...editingMember, nameZh: e.target.value})}
+                    />
+                  </div>
+                </div>
 
                 <div className="admin-form__flex-row">
                   <div className="admin-form__field">
@@ -164,6 +192,24 @@ export function LeadershipManager() {
                       value={editingMember.roleKo} 
                       onChange={e => setEditingMember({...editingMember, roleKo: e.target.value})}
                       required
+                    />
+                  </div>
+                </div>
+                <div className="admin-form__flex-row">
+                  <div className="admin-form__field">
+                    <label>Role (Japanese)</label>
+                    <input 
+                      type="text" 
+                      value={editingMember.roleJa || ''} 
+                      onChange={e => setEditingMember({...editingMember, roleJa: e.target.value})}
+                    />
+                  </div>
+                  <div className="admin-form__field">
+                    <label>Role (Chinese)</label>
+                    <input 
+                      type="text" 
+                      value={editingMember.roleZh || ''} 
+                      onChange={e => setEditingMember({...editingMember, roleZh: e.target.value})}
                     />
                   </div>
                 </div>
@@ -207,6 +253,26 @@ export function LeadershipManager() {
                     />
                   </div>
                 </div>
+                <div className="admin-form__flex-row">
+                  <div className="admin-form__field">
+                    <label>Summary (Japanese)</label>
+                    <input 
+                      type="text" 
+                      value={editingMember.summaryJa || ''} 
+                      onChange={e => setEditingMember({...editingMember, summaryJa: e.target.value})}
+                      placeholder="短い要約..."
+                    />
+                  </div>
+                  <div className="admin-form__field">
+                    <label>Summary (Chinese)</label>
+                    <input 
+                      type="text" 
+                      value={editingMember.summaryZh || ''} 
+                      onChange={e => setEditingMember({...editingMember, summaryZh: e.target.value})}
+                      placeholder="简短摘要..."
+                    />
+                  </div>
+                </div>
 
                 <div className="admin-form__flex-row">
                   <div className="admin-form__field">
@@ -224,6 +290,26 @@ export function LeadershipManager() {
                       value={editingMember.bioKo || ''} 
                       onChange={e => setEditingMember({...editingMember, bioKo: e.target.value})}
                       placeholder="상세 경력 사항..."
+                      rows={3}
+                    />
+                  </div>
+                </div>
+                <div className="admin-form__flex-row">
+                  <div className="admin-form__field">
+                    <label>Bio (Japanese)</label>
+                    <textarea 
+                      value={editingMember.bioJa || ''} 
+                      onChange={e => setEditingMember({...editingMember, bioJa: e.target.value})}
+                      placeholder="フルバイオグラフィー..."
+                      rows={3}
+                    />
+                  </div>
+                  <div className="admin-form__field">
+                    <label>Bio (Chinese)</label>
+                    <textarea 
+                      value={editingMember.bioZh || ''} 
+                      onChange={e => setEditingMember({...editingMember, bioZh: e.target.value})}
+                      placeholder="完整传记..."
                       rows={3}
                     />
                   </div>
@@ -252,6 +338,32 @@ export function LeadershipManager() {
                         highlightsKo: e.target.value.split(',').map(s => s.trim()).filter(Boolean)
                       })}
                       placeholder="혁신, 연구개발, 전략"
+                    />
+                  </div>
+                </div>
+                <div className="admin-form__flex-row">
+                  <div className="admin-form__field">
+                    <label>Highlights (Japanese, comma separated)</label>
+                    <input 
+                      type="text" 
+                      value={(editingMember.highlightsJa || []).join(', ')} 
+                      onChange={e => setEditingMember({
+                        ...editingMember, 
+                        highlightsJa: e.target.value.split(',').map(s => s.trim()).filter(Boolean)
+                      })}
+                      placeholder="イノベーション, 研究開発, 戦略"
+                    />
+                  </div>
+                  <div className="admin-form__field">
+                    <label>Highlights (Chinese, comma separated)</label>
+                    <input 
+                      type="text" 
+                      value={(editingMember.highlightsZh || []).join(', ')} 
+                      onChange={e => setEditingMember({
+                        ...editingMember, 
+                        highlightsZh: e.target.value.split(',').map(s => s.trim()).filter(Boolean)
+                      })}
+                      placeholder="创新, 研发, 战略"
                     />
                   </div>
                 </div>

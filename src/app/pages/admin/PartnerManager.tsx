@@ -71,13 +71,19 @@ export function PartnerManager() {
       id: `partner-${Date.now()}`,
       name: '',
       nameKo: '',
+      nameJa: '',
+      nameZh: '',
       country: '',
       countryKo: '',
+      countryJa: '',
+      countryZh: '',
       email: '',
       profileImage: null,
       level: 'None',
       description: '',
       descriptionKo: '',
+      descriptionJa: '',
+      descriptionZh: '',
       socialLinks: {},
       position: partners.length,
       isVisible: true,
@@ -144,6 +150,24 @@ export function PartnerManager() {
                   />
                 </div>
               </div>
+              <div className="admin-form__flex-row">
+                <div className="admin-form__field">
+                  <label>Name (Japanese)</label>
+                  <input 
+                    type="text" 
+                    value={editingPartner.nameJa || ''} 
+                    onChange={e => setEditingPartner({...editingPartner, nameJa: e.target.value})}
+                  />
+                </div>
+                <div className="admin-form__field">
+                  <label>Name (Chinese)</label>
+                  <input 
+                    type="text" 
+                    value={editingPartner.nameZh || ''} 
+                    onChange={e => setEditingPartner({...editingPartner, nameZh: e.target.value})}
+                  />
+                </div>
+              </div>
 
               <div className="admin-form__flex-row">
                 <div className="admin-form__field">
@@ -162,6 +186,24 @@ export function PartnerManager() {
                     value={editingPartner.countryKo} 
                     onChange={e => setEditingPartner({...editingPartner, countryKo: e.target.value})}
                     required
+                  />
+                </div>
+              </div>
+              <div className="admin-form__flex-row">
+                <div className="admin-form__field">
+                  <label>Country/Label (Japanese)</label>
+                  <input 
+                    type="text" 
+                    value={editingPartner.countryJa || ''} 
+                    onChange={e => setEditingPartner({...editingPartner, countryJa: e.target.value})}
+                  />
+                </div>
+                <div className="admin-form__field">
+                  <label>Country/Label (Chinese)</label>
+                  <input 
+                    type="text" 
+                    value={editingPartner.countryZh || ''} 
+                    onChange={e => setEditingPartner({...editingPartner, countryZh: e.target.value})}
                   />
                 </div>
               </div>
@@ -238,6 +280,34 @@ export function PartnerManager() {
                   onChange={e => setEditingPartner({...editingPartner, descriptionKo: e.target.value.slice(0, 250)})}
                   rows={3}
                   required
+                />
+              </div>
+
+              <div className="admin-form__field">
+                <div className="admin-label-row">
+                  <label>Description (Japanese)</label>
+                  <span className={`admin-char-count ${(editingPartner.descriptionJa || '').length > 200 ? 'is-warning' : ''}`}>
+                    {(editingPartner.descriptionJa || '').length}/250
+                  </span>
+                </div>
+                <textarea 
+                  value={editingPartner.descriptionJa || ''} 
+                  onChange={e => setEditingPartner({...editingPartner, descriptionJa: e.target.value.slice(0, 250)})}
+                  rows={3}
+                />
+              </div>
+
+              <div className="admin-form__field">
+                <div className="admin-label-row">
+                  <label>Description (Chinese)</label>
+                  <span className={`admin-char-count ${(editingPartner.descriptionZh || '').length > 200 ? 'is-warning' : ''}`}>
+                    {(editingPartner.descriptionZh || '').length}/250
+                  </span>
+                </div>
+                <textarea 
+                  value={editingPartner.descriptionZh || ''} 
+                  onChange={e => setEditingPartner({...editingPartner, descriptionZh: e.target.value.slice(0, 250)})}
+                  rows={3}
                 />
               </div>
 
