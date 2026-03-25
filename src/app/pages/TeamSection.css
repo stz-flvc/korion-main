@@ -456,38 +456,21 @@
 }
 
 .team-section__profile-badge {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   animation: badgePop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.team-section__badge-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 @keyframes badgePop {
   from { transform: scale(0) rotate(-45deg); opacity: 0; }
   to { transform: scale(1) rotate(0); opacity: 1; }
-}
-
-.team-section__profile-badge.is-gold {
-  background: linear-gradient(135deg, #ffd700, #ffaa00);
-  color: #000;
-  box-shadow: 0 0 15px rgba(255, 170, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.team-section__profile-badge.is-blue {
-  background: linear-gradient(135deg, #60a5fa, #2563eb);
-  color: #fff;
-  box-shadow: 0 0 15px rgba(37, 99, 235, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.team-section__profile-badge.is-green {
-  background: linear-gradient(135deg, #4ade80, #16a34a);
-  color: #fff;
-  box-shadow: 0 0 15px rgba(22, 163, 74, 0.2), 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .team-section__badge-star {

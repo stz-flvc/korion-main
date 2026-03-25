@@ -25,6 +25,9 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useAssetUrl } from '../utils/assetLoader';
 import { mockAdminService } from '../services/mockAdminService';
 import type { Partner, LeadershipMember } from '../types/admin';
+import badgeGold from '../../assets/team/badges/badge-gold.png';
+import badgeBlue from '../../assets/team/badges/badge-blue.png';
+import badgeGreen from '../../assets/team/badges/badge-green.png';
 import './TeamSection.css';
 
 const fadeUp = {
@@ -380,18 +383,12 @@ export function TeamSection() {
                   <div className="team-section__profile-body">
                     <div className="team-section__profile-country">
                       {item.country}
-                      {/* Level Badge - inline beside the country name */}
+                      {/* Level Badge - inline beside the country name using image assets */}
                       {item.level && item.level !== 'Partner' && item.level !== 'None' && (
-                        <span className={`team-section__profile-badge is-${item.level.toLowerCase()}`} title={`${item.level} Level`}>
-                          {item.level === 'Gold' ? (
-                            <span className="team-section__badge-star">
-                              <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                              </svg>
-                            </span>
-                          ) : (
-                            <CheckCircle2 size={12} strokeWidth={3} />
-                          )}
+                        <span className="team-section__profile-badge" title={`${item.level} Level`}>
+                          {item.level === 'Gold' && <img src={badgeGold} alt="Gold Badge" className="team-section__badge-img" />}
+                          {item.level === 'Blue' && <img src={badgeBlue} alt="Blue Badge" className="team-section__badge-img" />}
+                          {item.level === 'Green' && <img src={badgeGreen} alt="Green Badge" className="team-section__badge-img" />}
                         </span>
                       )}
                     </div>
