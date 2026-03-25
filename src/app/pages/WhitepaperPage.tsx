@@ -299,14 +299,14 @@ import {
                 type="button"
                 onClick={() => setMobileSidebarOpen(false)}
                 className="whitepaper-page__mobile-backdrop"
-                aria-label={t('Close whitepaper navigation overlay', '백서 메뉴 닫기')}
+                aria-label={t('Close whitepaper navigation overlay', '백서 메뉴 닫기', 'ホワイトペーパーメニューを閉じる', '关闭白皮书菜单')}
                 />
 
                 <div className="whitepaper-page__mobile-panel">
                 <div className="whitepaper-page__mobile-head">
                     <div>
                     <p className="whitepaper-page__eyebrow whitepaper-page__eyebrow--mobile">
-                        {t('Contents', '목차')}
+                        {t('Contents', '목차', '目次', '目录')}
                     </p>
                     <h2 className="whitepaper-page__mobile-title">
                         {t('Whitepaper Navigation', '백서 내비게이션', 'ホワイトペーパーナビゲーション', '白皮书导航')}
@@ -317,7 +317,7 @@ import {
                     type="button"
                     onClick={() => setMobileSidebarOpen(false)}
                     className="whitepaper-page__mobile-close"
-                    aria-label={t('Close whitepaper navigation', '백서 메뉴 닫기')}
+                    aria-label={t('Close whitepaper navigation', '백서 메뉴 닫기', 'ホワイトペーパーメニューを閉じる', '关闭白皮书菜单')}
                     >
                     <X size={20} />
                     </button>
@@ -332,7 +332,7 @@ import {
                     </div>
 
                     <p className="whitepaper-page__muted">
-                    {t('Viewing page', '현재 페이지')} {currentPage} / {TOTAL_PAGES}
+                    {t('Viewing page', '현재 페이지', '現在のページ', '当前页面')} {currentPage} / {TOTAL_PAGES}
                     </p>
                 </div>
 
@@ -370,7 +370,7 @@ import {
                     onClick={onPrev}
                     disabled={currentPage <= 1}
                     className="whitepaper-page__icon-button"
-                    aria-label={t('Previous page', '이전 페이지')}
+                    aria-label={t('Previous page', '이전 페이지', '前のページ', '上一页')}
                     >
                     <ChevronLeft size={20} />
                     </button>
@@ -384,7 +384,7 @@ import {
                     onClick={onNext}
                     disabled={currentPage >= TOTAL_PAGES}
                     className="whitepaper-page__icon-button"
-                    aria-label={t('Next page', '다음 페이지')}
+                    aria-label={t('Next page', '다음 페이지', '次のページ', '下一页')}
                     >
                     <ChevronRight size={20} />
                     </button>
@@ -396,7 +396,7 @@ import {
                     className="whitepaper-page__ghost-button whitepaper-page__ghost-button--small"
                     >
                     <Home size={16} />
-                    {t('Home', '홈')}
+                    {t('Home', '홈', 'ホーム', '首页')}
                     </Link>
 
                     <button
@@ -455,7 +455,7 @@ import {
                     <iframe
                         key={pdfSrc}
                         src={pdfSrc}
-                        title={t('KORION Whitepaper PDF Viewer', 'KORION 백서 PDF 뷰어')}
+                        title={t('KORION Whitepaper PDF Viewer', 'KORION 백서 PDF 뷰어', 'KORION ホワイトペーパー PDFビューア', 'KORION 白皮书 PDF 阅读器')}
                         className="whitepaper-page__iframe"
                     />
                     ) : (
