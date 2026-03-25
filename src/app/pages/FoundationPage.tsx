@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import {
   Landmark,
   ShieldCheck,
@@ -17,7 +16,7 @@ import {
   LockKeyhole,
   ArrowUpRight,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { useLanguage } from '../contexts/LanguageContext';
 import './FoundationPage.css';
 

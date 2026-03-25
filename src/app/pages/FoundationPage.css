@@ -2,32 +2,32 @@
 
     }
 
-    .foundation-page__container {
+    .found-page__container {
     width: min(100%, 1440px);
     margin: 0 auto;
 
     }
 
-    .foundation-page__container-01 {
+    .found-page__container-01 {
     width: min(100%, 1240px);
     margin: 0 auto;
 
     }
 
-    .foundation-page__section {
+    .found-section {
     position: relative;
     z-index: 2;
     padding: 110px 0;
     }
 
-    .foundation-page__hero {
+    .found-hero {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .foundation-page__hero-container {
+    .found-page__container.found-hero__container {
     min-height: 100vh;
     display: grid;
     grid-template-columns: minmax(0, 1.06fr) minmax(420px, 0.94fr);
@@ -37,13 +37,13 @@
     padding-bottom: 80px;
     }
 
-    .foundation-page__hero-bg {
+    .found-hero__bg {
     position: absolute;
     inset: 0;
     pointer-events: none;
     }
 
-    .foundation-page__grid {
+    .found-hero__grid {
     position: absolute;
     inset: 0;
     background-image:
@@ -53,14 +53,14 @@
     mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.15));
     }
 
-    .foundation-page__orb {
+    .found-hero__orb {
     position: absolute;
     border-radius: 9999px;
     filter: blur(90px);
     opacity: 0.85;
     }
 
-    .foundation-page__orb--one {
+    .found-hero__orb--one {
     width: 360px;
     height: 360px;
     top: 8%;
@@ -68,7 +68,7 @@
     background: rgba(77, 126, 255, 0.18);
     }
 
-    .foundation-page__orb--two {
+    .found-hero__orb--two {
     width: 460px;
     height: 460px;
     top: -8%;
@@ -76,7 +76,7 @@
     background: rgba(140, 78, 255, 0.16);
     }
 
-    .foundation-page__orb--three {
+    .found-hero__orb--three {
     width: 420px;
     height: 420px;
     bottom: -16%;
@@ -85,7 +85,7 @@
     background: rgba(0, 220, 255, 0.08);
     }
 
-    .foundation-page__beam {
+    .found-hero__beam {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -94,24 +94,24 @@
     opacity: 0.25;
     }
 
-    .foundation-page__beam--left {
+    .found-hero__beam--left {
     left: 8%;
     background: linear-gradient(180deg, rgba(72, 120, 255, 0.26), transparent 70%);
     transform: skewX(-20deg);
     }
 
-    .foundation-page__beam--right {
+    .found-hero__beam--right {
     right: 10%;
     background: linear-gradient(180deg, rgba(124, 58, 237, 0.22), transparent 70%);
     transform: skewX(18deg);
     }
 
-    .foundation-page__hero-copy {
+    .found-hero__content {
     position: relative;
     z-index: 2;
     }
 
-    .foundation-page__eyebrow {
+    .found-hero__badge {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -128,7 +128,7 @@
     backdrop-filter: blur(16px);
     }
 
-    .foundation-page__hero-title {
+    .found-hero__title {
     margin: 26px 0 22px;
     font-size: clamp(2.8rem, 5vw, 3.2rem);
     line-height: 1.24;
@@ -137,34 +137,34 @@
     max-width: 820px;
     }
 
-    .foundation-page__hero-title span {
+    .found-hero__title span {
     background: linear-gradient(90deg, #f8fbff 0%, #86acff 35%, #5eccff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     }
 
-    .foundation-page__hero-text {
+    .found-hero__subtitle {
     max-width: 760px;
     font-size: 1.08rem;
     line-height: 1.9;
     color: rgba(228, 236, 255, 0.82);
     }
 
-    .foundation-page__hero-actions {
+    .found-hero__actions {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
     margin-top: 34px;
     }
 
-    .foundation-page__primary-btn,
-    .foundation-page__secondary-btn,
-    .foundation-page__ghost-btn {
+    .found-btn--primary,
+    .found-btn--ghost,
+    .found-btn--ghost {
     text-decoration: none;
     transition: 0.28s ease;
     }
 
-    .foundation-page__primary-btn {
+    .found-btn--primary {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -178,12 +178,12 @@
         inset 0 1px 0 rgba(255,255,255,0.8);
     }
 
-    .foundation-page__primary-btn:hover {
+    .found-btn--primary:hover {
     transform: translateY(-2px);
     }
 
-    .foundation-page__secondary-btn,
-    .foundation-page__ghost-btn {
+    .found-btn--ghost,
+    .found-btn--ghost {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -196,13 +196,13 @@
     backdrop-filter: blur(14px);
     }
 
-    .foundation-page__secondary-btn:hover,
-    .foundation-page__ghost-btn:hover {
+    .found-btn--ghost:hover,
+    .found-btn--ghost:hover {
     border-color: rgba(146, 170, 255, 0.34);
     transform: translateY(-2px);
     }
 
-    .foundation-page__hero-metrics {
+    .found-hero__stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
@@ -210,7 +210,7 @@
     max-width: 860px;
     }
 
-    .foundation-page__metric-card {
+    .found-stat-card {
     padding: 18px 18px 17px;
     border-radius: 20px;
     border: 1px solid rgba(133, 155, 220, 0.14);
@@ -221,7 +221,7 @@
         inset 0 1px 0 rgba(255,255,255,0.04);
     }
 
-    .foundation-page__metric-card strong {
+    .found-stat-card strong {
     display: block;
     font-size: 0.98rem;
     font-weight: 700;
@@ -229,14 +229,14 @@
     margin-bottom: 8px;
     }
 
-    .foundation-page__metric-card span {
+    .found-stat-card span {
     display: block;
     color: rgba(216, 228, 255, 0.74);
     line-height: 1.6;
     font-size: 0.94rem;
     }
 
-    .foundation-page__hero-visual {
+    .found-hero__visual {
     position: relative;
     z-index: 2;
     min-height: 660px;
@@ -245,7 +245,7 @@
     justify-content: center;
     }
 
-    .foundation-page__visual-shell {
+    .found-visual-shell {
     position: relative;
     width: min(100%, 620px);
     aspect-ratio: 1 / 1;
@@ -254,31 +254,31 @@
     justify-content: center;
     }
 
-    .foundation-page__visual-ring {
+    .found-visual-ring {
     position: absolute;
     inset: 0;
     border-radius: 9999px;
     border: 1px solid rgba(147, 170, 255, 0.14);
     }
 
-    .foundation-page__visual-ring--outer {
+    .found-visual-ring--outer {
     animation: foundationRotate 20s linear infinite;
     box-shadow:
         0 0 0 1px rgba(255,255,255,0.02) inset,
         0 0 60px rgba(90, 120, 255, 0.08);
     }
 
-    .foundation-page__visual-ring--mid {
+    .found-visual-ring--mid {
     inset: 10%;
     animation: foundationRotateReverse 16s linear infinite;
     }
 
-    .foundation-page__visual-ring--inner {
+    .found-visual-ring--inner {
     inset: 22%;
     animation: foundationRotate 12s linear infinite;
     }
 
-    .foundation-page__visual-core {
+    .found-visual-core {
     position: relative;
     z-index: 3;
     width: min(100%, 360px);
@@ -295,7 +295,7 @@
     text-align: center;
     }
 
-    .foundation-page__visual-core-badge {
+    .found-visual-core-badge {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -309,21 +309,21 @@
     letter-spacing: 0.06em;
     }
 
-    .foundation-page__visual-core h3 {
+    .found-visual-core h3 {
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -0.03em;
     margin: 0 0 14px;
     }
 
-    .foundation-page__visual-core p {
+    .found-visual-core p {
     margin: 0;
     color: rgba(225, 235, 255, 0.78);
     line-height: 1.8;
     font-size: 0.98rem;
     }
 
-    .foundation-page__floating-card {
+    .found-floating-card {
     position: absolute;
     z-index: 4;
     display: inline-flex;
@@ -342,36 +342,36 @@
     font-weight: 600;
     }
 
-    .foundation-page__floating-card--one {
+    .found-floating-card--one {
     top: 10%;
     left: 2%;
     animation: foundationFloat 6s ease-in-out infinite;
     }
 
-    .foundation-page__floating-card--two {
+    .found-floating-card--two {
     right: -2%;
     top: 18%;
     animation: foundationFloat 7s ease-in-out infinite;
     }
 
-    .foundation-page__floating-card--three {
+    .found-floating-card--three {
     left: 12%;
     bottom: 8%;
     animation: foundationFloat 6.5s ease-in-out infinite;
     }
 
-    .foundation-page__section-head {
+    .found-section-head {
     max-width: 860px;
     margin-bottom: 42px;
     }
 
-    .foundation-page__section-head--center {
+    .found-section-head--center {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     }
 
-    .foundation-page__section-kicker {
+    .found-section-kicker {
     display: inline-block;
     margin-bottom: 16px;
     color: #a9c6ff;
@@ -381,7 +381,7 @@
     text-transform: uppercase;
     }
 
-    .foundation-page__section-head h2 {
+    .found-section-head h2 {
     margin: 0 0 18px;
     font-size: clamp(2rem, 3vw, 3.2rem);
     line-height: 1.16;
@@ -389,26 +389,26 @@
     font-weight: 800;
     }
 
-    .foundation-page__section-head p,
-    .foundation-page__principles-copy p,
-    .foundation-page__cta-copy p {
+    .found-section-head p,
+    .found-principles-copy p,
+    .found-cta-copy p {
     margin: 0;
     color: rgba(219, 229, 255, 0.78);
     font-size: 1.02rem;
     line-height: 1.9;
     }
 
-    .foundation-page__section--intro {
+    .found-section--intro {
     padding-top: 96px;
     }
 
-    .foundation-page__pillar-grid {
+    .found-pillar-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
     }
 
-    .foundation-page__pillar-card {
+    .found-pillar-card {
     position: relative;
     padding: 28px 24px 24px;
     border-radius: 26px;
@@ -421,7 +421,7 @@
     overflow: hidden;
     }
 
-    .foundation-page__pillar-card::before {
+    .found-pillar-card::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -429,9 +429,9 @@
     pointer-events: none;
     }
 
-    .foundation-page__pillar-icon,
-    .foundation-page__principle-icon,
-    .foundation-page__flow-icon {
+    .found-pillar-card__icon,
+    .found-principle-icon,
+    .found-flow-icon {
     width: 48px;
     height: 48px;
     border-radius: 16px;
@@ -444,45 +444,45 @@
     margin-bottom: 18px;
     }
 
-    .foundation-page__pillar-card h3,
-    .foundation-page__principle-card h3,
-    .foundation-page__flow-card h3,
-    .foundation-page__timeline-card h3,
-    .foundation-page__cta-copy h2,
-    .foundation-page__principles-copy h2 {
+    .found-pillar-card h3,
+    .found-principle-card h3,
+    .found-flow-card h3,
+    .found-timeline-card h3,
+    .found-cta-copy h2,
+    .found-principles-copy h2 {
     margin: 0 0 12px;
     letter-spacing: -0.03em;
     }
 
-    .foundation-page__pillar-card h3,
-    .foundation-page__flow-card h3,
-    .foundation-page__timeline-card h3,
-    .foundation-page__principle-card h3 {
+    .found-pillar-card h3,
+    .found-flow-card h3,
+    .found-timeline-card h3,
+    .found-principle-card h3 {
     font-size: 1.18rem;
     font-weight: 700;
     }
 
-    .foundation-page__pillar-card p,
-    .foundation-page__flow-card p,
-    .foundation-page__timeline-card p,
-    .foundation-page__principle-card p {
+    .found-pillar-card p,
+    .found-flow-card p,
+    .found-timeline-card p,
+    .found-principle-card p {
     margin: 0;
     color: rgba(217, 227, 255, 0.74);
     line-height: 1.8;
     font-size: 0.97rem;
     }
 
-    .foundation-page__section--structure {
+    .found-section--dark {
     padding-top: 40px;
     }
 
-    .foundation-page__flow {
+    .found-structure-flow {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
     }
 
-    .foundation-page__flow-card {
+    .found-flow-card {
     position: relative;
     padding: 24px;
     min-height: 260px;
@@ -496,51 +496,51 @@
         inset 0 1px 0 rgba(255,255,255,0.04);
     }
 
-    .foundation-page__flow-top {
+    .found-flow-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 18px;
     }
 
-    .foundation-page__flow-index {
+    .found-flow-index {
     font-size: 0.92rem;
     color: rgba(189, 208, 255, 0.62);
     font-weight: 700;
     letter-spacing: 0.08em;
     }
 
-    .foundation-page__section--principles {
+    .found-section--principles {
     padding-top: 70px;
     }
 
-    .foundation-page__principles-layout {
+    .found-principles-layout {
     display: grid;
     grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
     gap: 28px;
     align-items: start;
     }
 
-    .foundation-page__principles-copy {
+    .found-principles-copy {
     position: sticky;
     top: 120px;
     align-self: start;
     }
 
-    .foundation-page__principles-copy h2,
-    .foundation-page__cta-copy h2 {
+    .found-principles-copy h2,
+    .found-cta-copy h2 {
     font-size: clamp(2rem, 3vw, 3rem);
     line-height: 1.18;
     font-weight: 800;
     }
 
-    .foundation-page__principles-grid {
+    .found-principles-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
     }
 
-    .foundation-page__principle-card {
+    .found-principle-card {
     display: flex;
     gap: 18px;
     align-items: flex-start;
@@ -554,22 +554,22 @@
         inset 0 1px 0 rgba(255,255,255,0.04);
     }
 
-    .foundation-page__principle-icon {
+    .found-principle-icon {
     flex-shrink: 0;
     margin-bottom: 0;
     }
 
-    .foundation-page__section--expansion {
+    .found-section--expansion {
     padding-top: 70px;
     }
 
-    .foundation-page__timeline {
+    .found-timeline {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
     }
 
-    .foundation-page__timeline-card {
+    .found-timeline-card {
     position: relative;
     padding: 26px 22px 24px;
     border-radius: 24px;
@@ -582,7 +582,7 @@
         inset 0 1px 0 rgba(255,255,255,0.04);
     }
 
-    .foundation-page__timeline-phase {
+    .found-timeline-phase {
     display: inline-flex;
     align-items: center;
     min-height: 34px;
@@ -597,12 +597,12 @@
     margin-bottom: 14px;
     }
 
-    .foundation-page__section--cta {
+    .found-section--cta {
     padding-top: 90px;
     padding-bottom: 120px;
     }
 
-    .foundation-page__cta-box {
+    .found-cta-box {
     position: relative;
     display: flex;
     align-items: center;
@@ -620,7 +620,7 @@
     overflow: hidden;
     }
 
-    .foundation-page__cta-box::after {
+    .found-cta-box::after {
     content: '';
     position: absolute;
     inset: auto -10% -40% auto;
@@ -632,13 +632,13 @@
     pointer-events: none;
     }
 
-    .foundation-page__cta-copy {
+    .found-cta-copy {
     position: relative;
     z-index: 2;
     max-width: 820px;
     }
 
-    .foundation-page__cta-actions {
+    .found-cta-actions {
     position: relative;
     z-index: 2;
     display: flex;
@@ -684,23 +684,23 @@
         overflow-x: hidden;
     }
 
-    .foundation-page__container,
-    .foundation-page__container-01 {
+    .found-page__container,
+    .found-page__container-01 {
         width: calc(100% - 20px);
         padding-left: 0;
         padding-right: 0;
     }
 
-    .foundation-page__section {
+    .found-section {
         padding: 64px 0;
     }
 
     /* hero */
-    .foundation-page__hero {
+    .found-hero {
         min-height: auto;
     }
 
-    .foundation-page__hero-container {
+    .found-page__container.found-hero__container {
         min-height: auto;
         grid-template-columns: 1fr;
         gap: 28px;
@@ -708,12 +708,12 @@
         padding-bottom: 54px;
     }
 
-    .foundation-page__grid {
+    .found-hero__grid {
         background-size: 40px 40px;
         opacity: 0.5;
     }
 
-    .foundation-page__orb--one {
+    .found-hero__orb--one {
         width: 220px;
         height: 220px;
         top: 6%;
@@ -721,7 +721,7 @@
         filter: blur(70px);
     }
 
-    .foundation-page__orb--two {
+    .found-hero__orb--two {
         width: 240px;
         height: 240px;
         top: -2%;
@@ -729,7 +729,7 @@
         filter: blur(70px);
     }
 
-    .foundation-page__orb--three {
+    .found-hero__orb--three {
         width: 220px;
         height: 220px;
         bottom: -8%;
@@ -737,54 +737,54 @@
         filter: blur(70px);
     }
 
-    .foundation-page__beam {
+    .found-hero__beam {
         width: 120px;
         opacity: 0.14;
         filter: blur(18px);
     }
 
-    .foundation-page__beam--left {
+    .found-hero__beam--left {
         left: -4%;
     }
 
-    .foundation-page__beam--right {
+    .found-hero__beam--right {
         right: -4%;
     }
 
-    .foundation-page__hero-copy {
+    .found-hero__content {
         text-align: center;
     }
 
-    .foundation-page__eyebrow {
+    .found-hero__badge {
         min-height: 34px;
         padding: 0 12px;
         font-size: 0.68rem;
         letter-spacing: 0.12em;
     }
 
-    .foundation-page__hero-title {
+    .found-hero__title {
         margin: 18px 0 14px;
         font-size: clamp(1.9rem, 8.8vw, 2.6rem);
         line-height: 1.12;
         max-width: 100%;
     }
 
-    .foundation-page__hero-text {
+    .found-hero__subtitle {
         max-width: 100%;
         font-size: 0.93rem;
         line-height: 1.74;
     }
 
-    .foundation-page__hero-actions {
+    .found-hero__actions {
         flex-direction: column;
         gap: 10px;
         margin-top: 24px;
         width: 100%;
     }
 
-    .foundation-page__primary-btn,
-    .foundation-page__secondary-btn,
-    .foundation-page__ghost-btn {
+    .found-btn--primary,
+    .found-btn--ghost,
+    .found-btn--ghost {
         width: 100%;
         min-height: 48px;
         justify-content: center;
@@ -793,55 +793,55 @@
         font-size: 0.92rem;
     }
 
-    .foundation-page__hero-metrics {
+    .found-hero__stats {
         grid-template-columns: 1fr;
         gap: 12px;
         margin-top: 26px;
         max-width: 100%;
     }
 
-    .foundation-page__metric-card {
+    .found-stat-card {
         padding: 16px;
         border-radius: 18px;
         text-align: left;
     }
 
-    .foundation-page__metric-card strong {
+    .found-stat-card strong {
         font-size: 0.94rem;
         margin-bottom: 6px;
     }
 
-    .foundation-page__metric-card span {
+    .found-stat-card span {
         font-size: 0.88rem;
         line-height: 1.6;
     }
 
     /* hero visual */
-    .foundation-page__hero-visual {
+    .found-hero__visual {
         min-height: 360px;
     }
 
-    .foundation-page__visual-shell {
+    .found-visual-shell {
         max-width: 320px;
         width: 100%;
         margin: 0 auto;
     }
 
-    .foundation-page__visual-ring--mid {
+    .found-visual-ring--mid {
         inset: 12%;
     }
 
-    .foundation-page__visual-ring--inner {
+    .found-visual-ring--inner {
         inset: 24%;
     }
 
-    .foundation-page__visual-core {
+    .found-visual-core {
         width: min(100%, 240px);
         padding: 20px 16px;
         border-radius: 22px;
     }
 
-    .foundation-page__visual-core-badge {
+    .found-visual-core-badge {
         min-height: 30px;
         padding: 0 10px;
         font-size: 0.68rem;
@@ -849,134 +849,134 @@
         margin-bottom: 14px;
     }
 
-    .foundation-page__visual-core h3 {
+    .found-visual-core h3 {
         margin-bottom: 10px;
         font-size: 1.1rem;
     }
 
-    .foundation-page__visual-core p {
+    .found-visual-core p {
         font-size: 0.88rem;
         line-height: 1.65;
     }
 
-    .foundation-page__floating-card {
+    .found-floating-card {
         display: none;
     }
 
     /* section head */
-    .foundation-page__section-head {
+    .found-section-head {
         max-width: 100%;
         margin-bottom: 28px;
     }
 
-    .foundation-page__section-kicker {
+    .found-section-kicker {
         margin-bottom: 10px;
         font-size: 0.68rem;
         letter-spacing: 0.12em;
     }
 
-    .foundation-page__section-head h2,
-    .foundation-page__principles-copy h2,
-    .foundation-page__cta-copy h2 {
+    .found-section-head h2,
+    .found-principles-copy h2,
+    .found-cta-copy h2 {
         margin-bottom: 12px;
         font-size: clamp(1.5rem, 6.4vw, 2.2rem);
         line-height: 1.16;
     }
 
-    .foundation-page__section-head p,
-    .foundation-page__principles-copy p,
-    .foundation-page__cta-copy p {
+    .found-section-head p,
+    .found-principles-copy p,
+    .found-cta-copy p {
         font-size: 0.92rem;
         line-height: 1.72;
     }
 
-    .foundation-page__section--intro,
-    .foundation-page__section--structure,
-    .foundation-page__section--principles,
-    .foundation-page__section--expansion,
-    .foundation-page__section--cta {
+    .found-section--intro,
+    .found-section--dark,
+    .found-section--principles,
+    .found-section--expansion,
+    .found-section--cta {
         padding-top: 60px;
     }
 
-    .foundation-page__section--cta {
+    .found-section--cta {
         padding-bottom: 72px;
     }
 
     /* grids */
-    .foundation-page__pillar-grid,
-    .foundation-page__flow,
-    .foundation-page__principles-grid,
-    .foundation-page__timeline {
+    .found-pillar-grid,
+    .found-structure-flow,
+    .found-principles-grid,
+    .found-timeline {
         grid-template-columns: 1fr;
         gap: 14px;
     }
 
-    .foundation-page__principles-layout {
+    .found-principles-layout {
         grid-template-columns: 1fr;
         gap: 18px;
     }
 
-    .foundation-page__principles-copy {
+    .found-principles-copy {
         position: static;
         top: auto;
     }
 
-    .foundation-page__pillar-card,
-    .foundation-page__flow-card,
-    .foundation-page__principle-card,
-    .foundation-page__timeline-card {
+    .found-pillar-card,
+    .found-flow-card,
+    .found-principle-card,
+    .found-timeline-card {
         padding: 18px;
         border-radius: 18px;
     }
 
-    .foundation-page__pillar-icon,
-    .foundation-page__principle-icon,
-    .foundation-page__flow-icon {
+    .found-pillar-card__icon,
+    .found-principle-icon,
+    .found-flow-icon {
         width: 42px;
         height: 42px;
         border-radius: 14px;
         margin-bottom: 14px;
     }
 
-    .foundation-page__principle-card {
+    .found-principle-card {
         flex-direction: column;
         gap: 12px;
     }
 
-    .foundation-page__principle-icon {
+    .found-principle-icon {
         margin-bottom: 0;
     }
 
-    .foundation-page__pillar-card h3,
-    .foundation-page__flow-card h3,
-    .foundation-page__principle-card h3,
-    .foundation-page__timeline-card h3 {
+    .found-pillar-card h3,
+    .found-flow-card h3,
+    .found-principle-card h3,
+    .found-timeline-card h3 {
         margin-bottom: 8px;
         font-size: 1rem;
         line-height: 1.3;
     }
 
-    .foundation-page__pillar-card p,
-    .foundation-page__flow-card p,
-    .foundation-page__principle-card p,
-    .foundation-page__timeline-card p {
+    .found-pillar-card p,
+    .found-flow-card p,
+    .found-principle-card p,
+    .found-timeline-card p {
         font-size: 0.9rem;
         line-height: 1.65;
     }
 
-    .foundation-page__flow-card {
+    .found-flow-card {
         min-height: auto;
     }
 
-    .foundation-page__flow-top {
+    .found-flow-top {
         margin-bottom: 14px;
     }
 
-    .foundation-page__flow-index {
+    .found-flow-index {
         font-size: 0.8rem;
     }
 
-    .foundation-page__timeline-phase {
+    .found-timeline-phase {
         min-height: 30px;
         padding: 0 10px;
         margin-bottom: 12px;
@@ -984,7 +984,7 @@
     }
 
     /* cta */
-    .foundation-page__cta-box {
+    .found-cta-box {
         flex-direction: column;
         align-items: stretch;
         gap: 18px;
@@ -992,24 +992,24 @@
         border-radius: 22px;
     }
 
-    .foundation-page__cta-copy {
+    .found-cta-copy {
         max-width: 100%;
         text-align: left;
     }
 
-    .foundation-page__cta-actions {
+    .found-cta-actions {
         flex-direction: column;
         width: 100%;
         gap: 10px;
     }
 
-    .foundation-page__cta-actions .foundation-page__primary-btn,
-    .foundation-page__cta-actions .foundation-page__secondary-btn,
-    .foundation-page__cta-actions .foundation-page__ghost-btn {
+    .found-cta-actions .found-btn--primary,
+    .found-cta-actions .found-btn--ghost,
+    .found-cta-actions .found-btn--ghost {
         width: 100%;
     }
 
-    .foundation-page__cta-box::after {
+    .found-cta-box::after {
         width: 180px;
         height: 180px;
         inset: auto -8% -22% auto;
@@ -1018,78 +1018,78 @@
     }
 
     @media (max-width: 480px) {
-    .foundation-page__container,
-    .foundation-page__container-01 {
+    .found-page__container,
+    .found-page__container-01 {
         width: calc(100% - 16px);
     }
 
-    .foundation-page__section {
+    .found-section {
         padding: 54px 0;
     }
 
-    .foundation-page__hero-container {
+    .found-page__container.found-hero__container {
         padding-top: 84px;
         padding-bottom: 46px;
     }
 
-    .foundation-page__hero-title {
+    .found-hero__title {
         font-size: clamp(1.7rem, 9.6vw, 2.2rem);
     }
 
-    .foundation-page__hero-text,
-    .foundation-page__section-head p,
-    .foundation-page__principles-copy p,
-    .foundation-page__cta-copy p,
-    .foundation-page__pillar-card p,
-    .foundation-page__flow-card p,
-    .foundation-page__principle-card p,
-    .foundation-page__timeline-card p {
+    .found-hero__subtitle,
+    .found-section-head p,
+    .found-principles-copy p,
+    .found-cta-copy p,
+    .found-pillar-card p,
+    .found-flow-card p,
+    .found-principle-card p,
+    .found-timeline-card p {
         font-size: 0.86rem;
         line-height: 1.66;
     }
 
-    .foundation-page__hero-visual {
+    .found-hero__visual {
         min-height: 300px;
     }
 
-    .foundation-page__visual-shell {
+    .found-visual-shell {
         max-width: 270px;
     }
 
-    .foundation-page__visual-core {
+    .found-visual-core {
         width: min(100%, 210px);
         padding: 16px 14px;
         border-radius: 18px;
     }
 
-    .foundation-page__visual-core-badge {
+    .found-visual-core-badge {
         font-size: 0.62rem;
     }
 
-    .foundation-page__visual-core h3 {
+    .found-visual-core h3 {
         font-size: 0.98rem;
     }
 
-    .foundation-page__metric-card,
-    .foundation-page__pillar-card,
-    .foundation-page__flow-card,
-    .foundation-page__principle-card,
-    .foundation-page__timeline-card,
-    .foundation-page__cta-box {
+    .found-stat-card,
+    .found-pillar-card,
+    .found-flow-card,
+    .found-principle-card,
+    .found-timeline-card,
+    .found-cta-box {
         padding: 14px;
         border-radius: 16px;
     }
 
-    .foundation-page__pillar-icon,
-    .foundation-page__principle-icon,
-    .foundation-page__flow-icon {
+    .found-pillar-card__icon,
+    .found-principle-icon,
+    .found-flow-icon {
         width: 38px;
         height: 38px;
         border-radius: 12px;
         margin-bottom: 12px;
     }
 
-    .foundation-page__timeline-phase {
+    .found-timeline-phase {
         font-size: 0.66rem;
     }
     }
