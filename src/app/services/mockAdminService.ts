@@ -69,7 +69,7 @@ export const mockAdminService = {
     try {
       const parsed = JSON.parse(data);
       return parsed.map((p: any) => {
-        const seed = seedData.find(s => s.id === p.id);
+        const seed = seedData.find(s => s.id === p.id || s.name === p.name);
         return {
           ...p,
           name: p.name || '',
@@ -230,7 +230,7 @@ export const mockAdminService = {
       });
 
       return parsed.map((m: any) => {
-        const seed = seedData.find(s => s.id === m.id);
+        const seed = seedData.find(s => s.id === m.id || s.name === m.name);
         return {
           ...m,
           name: m.name || '',
