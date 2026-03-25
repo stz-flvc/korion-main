@@ -10,8 +10,7 @@ export const mockAdminService = {
   // --- Partners ---
   getPartners(): Partner[] {
     const data = localStorage.getItem(STORAGE_KEYS.PARTNERS);
-    if (!data) {
-      const seedData: Partner[] = [
+    const seedData: Partner[] = [
         {
           id: 'p1', name: 'Lead Platform Engineer', nameKo: '리드 플랫폼 엔지니어', nameJa: 'リードプラットフォームエンジニア', nameZh: '首席平台工程师',
           country: 'General', countryKo: '일반', countryJa: '一般', countryZh: '常规', email: 'platform@korion.io',
@@ -62,25 +61,36 @@ export const mockAdminService = {
           socialLinks: { twitter: '', linkedin: '', instagram: '' }, position: 6, isVisible: true
         }
       ];
+
+    if (!data) {
       localStorage.setItem(STORAGE_KEYS.PARTNERS, JSON.stringify(seedData));
       return seedData;
     }
     try {
       const parsed = JSON.parse(data);
-      return parsed.map((p: any) => ({
-        ...p,
-        name: p.name || '',
-        nameKo: p.nameKo || p.name || '',
-        country: p.country || '',
-        countryKo: p.countryKo || p.country || '',
-        email: p.email || '',
-        level: p.level || 'None',
-        description: p.description || p.desc || '',
-        descriptionKo: p.descriptionKo || p.description || p.descKo || p.desc || '',
-        socialLinks: p.socialLinks || { twitter: p.twitter || '', linkedin: p.linkedin || '', instagram: p.instagram || '' },
-        isVisible: p.isVisible !== undefined ? p.isVisible : true,
-        position: p.position !== undefined ? p.position : 0
-      }));
+      return parsed.map((p: any) => {
+        const seed = seedData.find(s => s.id === p.id);
+        return {
+          ...p,
+          name: p.name || '',
+          nameKo: p.nameKo || p.name || '',
+          nameJa: p.nameJa || seed?.nameJa || '',
+          nameZh: p.nameZh || seed?.nameZh || '',
+          country: p.country || '',
+          countryKo: p.countryKo || p.country || '',
+          countryJa: p.countryJa || seed?.countryJa || '',
+          countryZh: p.countryZh || seed?.countryZh || '',
+          email: p.email || '',
+          level: p.level || 'None',
+          description: p.description || p.desc || '',
+          descriptionKo: p.descriptionKo || p.description || p.descKo || p.desc || '',
+          descriptionJa: p.descriptionJa || seed?.descriptionJa || '',
+          descriptionZh: p.descriptionZh || seed?.descriptionZh || '',
+          socialLinks: p.socialLinks || { twitter: p.twitter || '', linkedin: p.linkedin || '', instagram: p.instagram || '' },
+          isVisible: p.isVisible !== undefined ? p.isVisible : true,
+          position: p.position !== undefined ? p.position : 0
+        };
+      });
     } catch (e) {
       console.error('Failed to parse partners data', e);
       return [];
@@ -219,12 +229,26 @@ export const mockAdminService = {
         }
       });
 
-      return parsed.map((m: any) => ({
+      return parsed.map((m: any) => {
+        const seed = seedData.find(s => s.id === m.id);
+        return {
           ...m,
           name: m.name || '',
           nameKo: m.nameKo || m.name || '',
+          nameJa: m.nameJa || seed?.nameJa || '',
+          nameZh: m.nameZh || seed?.nameZh || '',
           role: m.role || '',
           roleKo: m.roleKo || m.role || '',
+          roleJa: m.roleJa || seed?.roleJa || '',
+          roleZh: m.roleZh || seed?.roleZh || '',
+          summary: m.summary || '',
+          summaryKo: m.summaryKo || m.summary || '',
+          summaryJa: m.summaryJa || seed?.summaryJa || '',
+          summaryZh: m.summaryZh || seed?.summaryZh || '',
+          bio: m.bio || '',
+          bioKo: m.bioKo || m.bio || '',
+          bioJa: m.bioJa || seed?.bioJa || '',
+          bioZh: m.bioZh || seed?.bioZh || '',
           isVisible: m.isVisible !== undefined ? m.isVisible : true,
           position: m.position !== undefined ? m.position : 0,
           socialLinks: m.socialLinks || { 
@@ -235,9 +259,10 @@ export const mockAdminService = {
           },
           highlights: m.highlights || [],
           highlightsKo: m.highlightsKo || [],
-          highlightsJa: m.highlightsJa || [],
-          highlightsZh: m.highlightsZh || []
-      }));
+          highlightsJa: m.highlightsJa || seed?.highlightsJa || [],
+          highlightsZh: m.highlightsZh || seed?.highlightsZh || []
+        };
+      });
     } catch (e) {
       console.error('Failed to parse leadership data', e);
       return seedData;
